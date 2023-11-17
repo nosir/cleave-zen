@@ -10,6 +10,10 @@
     },
     "rules": {
         "arrow-body-style": ["error", "as-needed"],
-        "no-console": "warn"
+        "no-console": "warn",
+        "comma-dangle": "off",
+        "@typescript-eslint/comma-dangle": "off",
+        "indent": "off",
+        "@typescript-eslint/indent": "off"
     }
 }
