@@ -12,10 +12,6 @@ export interface FormatDateOptionsType {
   dateMax?: string
 }
 
-export interface FormatDateResultType {
-  value: string
-}
-
 export interface InitDateRangeReturnType {
   min: number[]
   max: number[]

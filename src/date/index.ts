@@ -1,4 +1,4 @@
-import type { BlocksType } from '../common/types'
+import type { BlocksType, FormatResultType } from '../common/types'
 import {
   stripNonNumeric,
   stripDelimiters,
@@ -13,7 +13,6 @@ import type {
   InitDateRangeReturnType,
   DatePatternType,
   FormatDateOptionsType,
-  FormatDateResultType,
   DateCalculateOptionsType,
 } from './types'
 
@@ -289,7 +288,7 @@ const getRangeFixedDate = ({
 
 export const formatDate = (
   props: FormatDateOptionsType | string
-): FormatDateResultType => {
+): FormatResultType => {
   const options: FormatDateOptionsType = isString(props)
     ? { value: props }
     : props

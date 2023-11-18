@@ -19,3 +19,7 @@ export interface GetFormattedValuePropsType {
   delimiter: DelimiterType
   delimiterLazyShow?: boolean
 }
+
+export interface FormatResultType {
+  value: string
+}

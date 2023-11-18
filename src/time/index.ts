@@ -1,4 +1,4 @@
-import type { BlocksType } from '../common/types'
+import type { BlocksType, FormatResultType } from '../common/types'
 import {
   stripNonNumeric,
   stripDelimiters,
@@ -20,7 +20,6 @@ import type {
   GetFixedTimeStringPropsType,
   GetValidatedTimePropsType,
   TimeUnit,
-  FormatTimeResultType,
 } from './types'
 
 const getTimeFormatOptions = (
@@ -192,7 +191,7 @@ const getValidatedTime = ({
 
 export const formatTime = (
   props: FormatTimeOptionsType | string
-): FormatTimeResultType => {
+): FormatResultType => {
   const options: FormatTimeOptionsType = isString(props)
     ? { value: props }
     : props

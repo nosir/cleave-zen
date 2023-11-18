@@ -1,6 +1,8 @@
 import { registerCursorTracker } from './cursor-tracker'
 import type { RegisterCursorTrackerPropsType } from './cursor-tracker/types'
 
+import type { FormatResultType } from './common/types'
+
 import { formatCreditCard } from './credit-card'
 import { DefaultCreditCardDelimiter } from './credit-card/constants'
 import type {
@@ -8,15 +10,24 @@ import type {
   FormatCreditCardResultType,
 } from './credit-card/types'
 
+import { formatNumeral } from './numeral'
+import {
+  NumeralThousandGroupStyles,
+  DefaultNumeralDelimiter,
+} from './numeral/constants'
+import type { FormatNumeralOptionsType } from './numeral/types'
+
 import { formatDate } from './date'
 import { DefaultDateDelimiter } from './date/constants'
-import type { FormatDateResultType, FormatDateOptionsType } from './date/types'
+import type { FormatDateOptionsType } from './date/types'
 
 import { formatTime } from './time'
 import { DefaultTimeDelimiter } from './time/constants'
-import type { FormatTimeOptionsType, FormatTimeResultType } from './time/types'
+import type { FormatTimeOptionsType } from './time/types'
 
 export {
+  type FormatResultType,
+
   // cursor tracker
   registerCursorTracker,
   type RegisterCursorTrackerPropsType,
@@ -27,15 +38,19 @@ export {
   type FormatCreditCardOptionsType,
   type FormatCreditCardResultType,
 
+  // numeral
+  formatNumeral,
+  NumeralThousandGroupStyles,
+  DefaultNumeralDelimiter,
+  type FormatNumeralOptionsType,
+
   // date
   formatDate,
   DefaultDateDelimiter,
   type FormatDateOptionsType,
-  type FormatDateResultType,
 
   // time
   formatTime,
   DefaultTimeDelimiter,
   type FormatTimeOptionsType,
-  type FormatTimeResultType,
 }

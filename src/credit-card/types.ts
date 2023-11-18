@@ -1,4 +1,4 @@
-import type { BlocksType } from '../common/types'
+import type { BlocksType, FormatResultType } from '../common/types'
 import type { CreditCardTypes } from './constants'
 
 export type CreditCardBlocksType = Record<CreditCardTypes, BlocksType>
@@ -27,7 +27,6 @@ export interface FormatCreditCardOptionsType {
   delimiterLazyShow?: boolean
 }
 
-export interface FormatCreditCardResultType {
-  value: string
+export interface FormatCreditCardResultType extends FormatResultType {
   type: string
 }

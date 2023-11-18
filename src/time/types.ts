@@ -12,10 +12,6 @@ export interface FormatTimeOptionsType {
   timeFormat?: TimeFormatType
 }
 
-export interface FormatTimeResultType {
-  value: string
-}
-
 export interface TimeFormatOptionsType {
   maxHourFirstDigit: number
   maxHours: number
