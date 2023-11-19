@@ -29,9 +29,9 @@ const stripPrefix = ({
 
   // result prefix string does not match pre-defined prefix
   if (value.slice(0, prefixLength) !== prefix && !tailPrefix) {
-    return value
+    return ''
   } else if (value.slice(-prefixLength) !== prefix && tailPrefix) {
-    return value
+    return ''
   }
 
   // No issue, strip prefix for new value
@@ -48,12 +48,12 @@ export const formatGeneral = (
     delimiters = [],
     delimiterLazyShow = false,
     prefix = '',
-    tailPrefix = false,
     numericOnly = false,
     uppercase = false,
     lowercase = false,
   } = props
 
+  const tailPrefix: boolean = false // This is too buggy to be true
   let result: string = value
 
   // strip delimiters

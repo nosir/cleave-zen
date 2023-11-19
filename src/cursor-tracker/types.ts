@@ -2,6 +2,7 @@ import type { DelimiterType, RequireExactlyOne } from '../common/types'
 
 export type RegisterCursorTrackerPropsType = {
   input: HTMLInputElement
+  prefix?: string
 } & RequireExactlyOne<
   {
     delimiter: DelimiterType

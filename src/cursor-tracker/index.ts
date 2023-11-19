@@ -1,4 +1,5 @@
 import type { DelimiterType } from '../common/types'
+import { stripDelimiters } from '../common/utils'
 import type {
   CalculeteCleanCursorIndexPropsType,
   CalculeteDirtyCursorIndexPropsType,
@@ -40,11 +41,11 @@ const calculeteDirtyCursorIndex = ({
 
 export const registerCursorTracker = ({
   input,
-  delimiter,
-  delimiters,
+  delimiter = '',
+  delimiters = [],
+  prefix = '',
 }: RegisterCursorTrackerPropsType): void => {
-  const cursorTrackerDelimiters: DelimiterType[] =
-    delimiter != null ? [delimiter] : delimiters ?? []
+  const cursorTrackerDelimiters: DelimiterType[] = [delimiter, ...delimiters]
 
   const cursorTrackerInput: CursorTrackerInputElement =
     input as CursorTrackerInputElement
@@ -60,6 +61,8 @@ export const registerCursorTracker = ({
 
     const element: CursorTrackerInputElement =
       e.target as CursorTrackerInputElement
+
+    // if typing from the end but not backward, do nothing
     if (!isBackward && element.value.length === element.selectionEnd) {
       return
     }
@@ -71,6 +74,16 @@ export const registerCursorTracker = ({
     })
 
     setTimeout(() => {
+      // if current value is only to add the delimiter after prefix, do nothing
+      if (
+        stripDelimiters({
+          value: element.value,
+          delimiters: cursorTrackerDelimiters,
+        }) === prefix
+      ) {
+        return
+      }
+
       const dirtyCursorIndex = calculeteDirtyCursorIndex({
         value: element.value,
         cleanCursorIndex: element.CLEAVE_ZEN_cleanCursorIndex ?? 0,

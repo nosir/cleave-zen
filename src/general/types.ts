@@ -7,7 +7,6 @@ export interface FormatGeneralOptionsType {
   delimiter?: DelimiterType
   delimiters?: DelimiterType[]
   prefix?: string
-  tailPrefix?: boolean
   numericOnly?: boolean
   uppercase?: boolean
   lowercase?: boolean
