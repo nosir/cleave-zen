@@ -51,20 +51,29 @@ export const stripDelimiters = ({
 export const getFormattedValue = ({
   value,
   blocks,
-  delimiter,
-  delimiterLazyShow,
+  delimiter = '',
+  delimiters = [],
+  delimiterLazyShow = false,
 }: GetFormattedValuePropsType): string => {
   let result = ''
   let valueRemaining = value
+  let currentDelimiter = ''
 
   blocks.forEach((length: number, index: number) => {
     if (valueRemaining.length > 0) {
       const sub = valueRemaining.slice(0, length)
       const rest = valueRemaining.slice(length)
 
-      if (delimiterLazyShow ?? false) {
+      if (delimiters.length > 0) {
+        currentDelimiter =
+          delimiters[delimiterLazyShow ? index - 1 : index] ?? currentDelimiter
+      } else {
+        currentDelimiter = delimiter
+      }
+
+      if (delimiterLazyShow) {
         if (index > 0) {
-          result += delimiter
+          result += currentDelimiter
         }
 
         result += sub
@@ -72,7 +81,7 @@ export const getFormattedValue = ({
         result += sub
 
         if (sub.length === length && index < blocks.length - 1) {
-          result += delimiter
+          result += currentDelimiter
         }
       }
 

@@ -3,6 +3,9 @@ import type { RegisterCursorTrackerPropsType } from './cursor-tracker/types'
 
 import type { FormatResultType } from './common/types'
 
+import { formatGeneral } from './general'
+import type { FormatGeneralOptionsType } from './general/types'
+
 import { formatCreditCard } from './credit-card'
 import { DefaultCreditCardDelimiter } from './credit-card/constants'
 import type {
@@ -31,6 +34,10 @@ export {
   // cursor tracker
   registerCursorTracker,
   type RegisterCursorTrackerPropsType,
+
+  // general
+  formatGeneral,
+  type FormatGeneralOptionsType,
 
   // credit card
   formatCreditCard,

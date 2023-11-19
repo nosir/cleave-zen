@@ -16,7 +16,8 @@ export type StripDelimitersPropsType = { value: string } & RequireExactlyOne<
 export interface GetFormattedValuePropsType {
   value: string
   blocks: BlocksType
-  delimiter: DelimiterType
+  delimiter?: DelimiterType
+  delimiters?: DelimiterType[]
   delimiterLazyShow?: boolean
 }
 

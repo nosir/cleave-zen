@@ -55,7 +55,6 @@ export const registerCursorTracker = ({
 
   cursorTrackerInput.CLEAVE_ZEN_registered = true
 
-  // selectionEnd
   cursorTrackerInput.addEventListener('input', e => {
     const isBackward = (e as InputEvent).inputType === 'deleteContentBackward'
 
