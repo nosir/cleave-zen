@@ -25,6 +25,7 @@
   "unpkg": "./dist/cleave-zen.umd.js",
   "types": "dist/index.d.ts",
   "scripts": {
+    "docs": "typedoc --out docs ./src",
     "build": "microbundle",
     "dev": "microbundle watch"
   },
@@ -38,6 +39,8 @@
     "eslint-plugin-promise": "^6.0.0",
     "microbundle": "^0.15.1",
     "prettier": "^3.1.0",
+    "typedoc": "^0.25.3",
+    "typedoc-plugin-markdown": "^3.17.1",
     "typescript": "*"
   }
 }
