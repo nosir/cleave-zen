@@ -95,9 +95,9 @@ const value: string = formatCreditCard('5163000011112222', options)
 
 ### Track cursor (optional)
 
-When you reset the input value, the cursor automatically moves to the end of the
-input field, which can be annoying when you typing or deleting letters inside
-the string content.
+When you manually updating the input field with formatted value, the cursor
+moves to the end of the field, which can be super annoying when you typing or
+deleting letters inside the string content.
 
 This library can fix this issue for you! Simply add `registerCursorTracker` for
 the input field:
