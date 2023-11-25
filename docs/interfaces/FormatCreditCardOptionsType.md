@@ -19,7 +19,7 @@
 
 #### Defined in
 
-[credit-card/types.ts:25](https://github.com/nosir/cleave-zen/blob/c5b793a/src/credit-card/types.ts#L25)
+[credit-card/types.ts:25](https://github.com/nosir/cleave-zen/blob/b26233f/src/credit-card/types.ts#L25)
 
 ___
 
@@ -29,7 +29,7 @@ ___
 
 #### Defined in
 
-[credit-card/types.ts:27](https://github.com/nosir/cleave-zen/blob/c5b793a/src/credit-card/types.ts#L27)
+[credit-card/types.ts:27](https://github.com/nosir/cleave-zen/blob/b26233f/src/credit-card/types.ts#L27)
 
 ___
 
@@ -39,7 +39,7 @@ ___
 
 #### Defined in
 
-[credit-card/types.ts:26](https://github.com/nosir/cleave-zen/blob/c5b793a/src/credit-card/types.ts#L26)
+[credit-card/types.ts:26](https://github.com/nosir/cleave-zen/blob/b26233f/src/credit-card/types.ts#L26)
 
 ___
 
@@ -49,4 +49,4 @@ ___
 
 #### Defined in
 
-[credit-card/types.ts:24](https://github.com/nosir/cleave-zen/blob/c5b793a/src/credit-card/types.ts#L24)
+[credit-card/types.ts:24](https://github.com/nosir/cleave-zen/blob/b26233f/src/credit-card/types.ts#L24)

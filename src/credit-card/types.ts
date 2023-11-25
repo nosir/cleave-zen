@@ -28,5 +28,5 @@ export interface FormatCreditCardOptionsType {
 }
 
 export interface FormatCreditCardResultType extends FormatResultType {
-  type: string
+  type: CreditCardTypes
 }

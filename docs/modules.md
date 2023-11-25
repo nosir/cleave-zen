@@ -6,6 +6,7 @@
 
 ### Enumerations
 
+- [CreditCardTypes](enums/CreditCardTypes.md)
 - [NumeralThousandGroupStyles](enums/NumeralThousandGroupStyles.md)
 
 ### Interfaces
@@ -20,7 +21,14 @@
 
 ### Type Aliases
 
+- [BlocksType](modules.md#blockstype)
+- [DatePatternType](modules.md#datepatterntype)
+- [DateUnit](modules.md#dateunit)
+- [DelimiterType](modules.md#delimitertype)
 - [RegisterCursorTrackerPropsType](modules.md#registercursortrackerpropstype)
+- [TimeFormatType](modules.md#timeformattype)
+- [TimePatternType](modules.md#timepatterntype)
+- [TimeUnit](modules.md#timeunit)
 
 ### Variables
 
@@ -40,53 +48,123 @@
 
 ## Type Aliases
 
-### RegisterCursorTrackerPropsType
+### BlocksType
 
-Ƭ **RegisterCursorTrackerPropsType**: \{ `input`: `HTMLInputElement` ; `prefix?`: `string`  } & `RequireExactlyOne`\<\{ `delimiter`: `DelimiterType` ; `delimiters`: `DelimiterType`[]  }, ``"delimiter"`` \| ``"delimiters"``\>
+Ƭ **BlocksType**: `number`[]
 
 #### Defined in
 
-[cursor-tracker/types.ts:3](https://github.com/nosir/cleave-zen/blob/c5b793a/src/cursor-tracker/types.ts#L3)
+[common/types.ts:6](https://github.com/nosir/cleave-zen/blob/b26233f/src/common/types.ts#L6)
+
+___
+
+### DatePatternType
+
+Ƭ **DatePatternType**: [`DateUnit`](modules.md#dateunit)[]
+
+#### Defined in
+
+[date/types.ts:4](https://github.com/nosir/cleave-zen/blob/b26233f/src/date/types.ts#L4)
+
+___
+
+### DateUnit
+
+Ƭ **DateUnit**: ``"Y"`` \| ``"y"`` \| ``"m"`` \| ``"d"``
+
+#### Defined in
+
+[date/types.ts:3](https://github.com/nosir/cleave-zen/blob/b26233f/src/date/types.ts#L3)
+
+___
+
+### DelimiterType
+
+Ƭ **DelimiterType**: `string`
+
+#### Defined in
+
+[common/types.ts:5](https://github.com/nosir/cleave-zen/blob/b26233f/src/common/types.ts#L5)
+
+___
+
+### RegisterCursorTrackerPropsType
+
+Ƭ **RegisterCursorTrackerPropsType**: \{ `input`: `HTMLInputElement` ; `prefix?`: `string`  } & `RequireExactlyOne`\<\{ `delimiter`: [`DelimiterType`](modules.md#delimitertype) ; `delimiters`: [`DelimiterType`](modules.md#delimitertype)[]  }, ``"delimiter"`` \| ``"delimiters"``\>
+
+#### Defined in
+
+[cursor-tracker/types.ts:3](https://github.com/nosir/cleave-zen/blob/b26233f/src/cursor-tracker/types.ts#L3)
+
+___
+
+### TimeFormatType
+
+Ƭ **TimeFormatType**: ``"12"`` \| ``"24"``
+
+#### Defined in
+
+[time/types.ts:5](https://github.com/nosir/cleave-zen/blob/b26233f/src/time/types.ts#L5)
+
+___
+
+### TimePatternType
+
+Ƭ **TimePatternType**: [`TimeUnit`](modules.md#timeunit)[]
+
+#### Defined in
+
+[time/types.ts:4](https://github.com/nosir/cleave-zen/blob/b26233f/src/time/types.ts#L4)
+
+___
+
+### TimeUnit
+
+Ƭ **TimeUnit**: ``"h"`` \| ``"m"`` \| ``"s"``
+
+#### Defined in
+
+[time/types.ts:3](https://github.com/nosir/cleave-zen/blob/b26233f/src/time/types.ts#L3)
 
 ## Variables
 
 ### DefaultCreditCardDelimiter
 
-• `Const` **DefaultCreditCardDelimiter**: `DelimiterType` = `' '`
+• `Const` **DefaultCreditCardDelimiter**: [`DelimiterType`](modules.md#delimitertype) = `' '`
 
 #### Defined in
 
-[credit-card/constants.ts:4](https://github.com/nosir/cleave-zen/blob/c5b793a/src/credit-card/constants.ts#L4)
+[credit-card/constants.ts:4](https://github.com/nosir/cleave-zen/blob/b26233f/src/credit-card/constants.ts#L4)
 
 ___
 
 ### DefaultDateDelimiter
 
-• `Const` **DefaultDateDelimiter**: `DelimiterType` = `'/'`
+• `Const` **DefaultDateDelimiter**: [`DelimiterType`](modules.md#delimitertype) = `'/'`
 
 #### Defined in
 
-[date/constants.ts:4](https://github.com/nosir/cleave-zen/blob/c5b793a/src/date/constants.ts#L4)
+[date/constants.ts:4](https://github.com/nosir/cleave-zen/blob/b26233f/src/date/constants.ts#L4)
 
 ___
 
 ### DefaultNumeralDelimiter
 
-• `Const` **DefaultNumeralDelimiter**: `DelimiterType` = `','`
+• `Const` **DefaultNumeralDelimiter**: [`DelimiterType`](modules.md#delimitertype) = `','`
 
 #### Defined in
 
-[numeral/constants.ts:12](https://github.com/nosir/cleave-zen/blob/c5b793a/src/numeral/constants.ts#L12)
+[numeral/constants.ts:9](https://github.com/nosir/cleave-zen/blob/b26233f/src/numeral/constants.ts#L9)
 
 ___
 
 ### DefaultTimeDelimiter
 
-• `Const` **DefaultTimeDelimiter**: `DelimiterType` = `':'`
+• `Const` **DefaultTimeDelimiter**: [`DelimiterType`](modules.md#delimitertype) = `':'`
 
 #### Defined in
 
-[time/constants.ts:5](https://github.com/nosir/cleave-zen/blob/c5b793a/src/time/constants.ts#L5)
+[time/constants.ts:5](https://github.com/nosir/cleave-zen/blob/b26233f/src/time/constants.ts#L5)
 
 ## Functions
 
@@ -106,7 +184,7 @@ ___
 
 #### Defined in
 
-[credit-card/index.ts:63](https://github.com/nosir/cleave-zen/blob/c5b793a/src/credit-card/index.ts#L63)
+[credit-card/index.ts:63](https://github.com/nosir/cleave-zen/blob/b26233f/src/credit-card/index.ts#L63)
 
 ___
 
@@ -126,7 +204,7 @@ ___
 
 #### Defined in
 
-[date/index.ts:289](https://github.com/nosir/cleave-zen/blob/c5b793a/src/date/index.ts#L289)
+[date/index.ts:289](https://github.com/nosir/cleave-zen/blob/b26233f/src/date/index.ts#L289)
 
 ___
 
@@ -146,7 +224,7 @@ ___
 
 #### Defined in
 
-[general/index.ts:41](https://github.com/nosir/cleave-zen/blob/c5b793a/src/general/index.ts#L41)
+[general/index.ts:41](https://github.com/nosir/cleave-zen/blob/b26233f/src/general/index.ts#L41)
 
 ___
 
@@ -166,7 +244,7 @@ ___
 
 #### Defined in
 
-[numeral/index.ts:117](https://github.com/nosir/cleave-zen/blob/c5b793a/src/numeral/index.ts#L117)
+[numeral/index.ts:117](https://github.com/nosir/cleave-zen/blob/b26233f/src/numeral/index.ts#L117)
 
 ___
 
@@ -186,7 +264,7 @@ ___
 
 #### Defined in
 
-[time/index.ts:192](https://github.com/nosir/cleave-zen/blob/c5b793a/src/time/index.ts#L192)
+[time/index.ts:192](https://github.com/nosir/cleave-zen/blob/b26233f/src/time/index.ts#L192)
 
 ___
 
@@ -206,4 +284,4 @@ ___
 
 #### Defined in
 
-[cursor-tracker/index.ts:42](https://github.com/nosir/cleave-zen/blob/c5b793a/src/cursor-tracker/index.ts#L42)
+[cursor-tracker/index.ts:42](https://github.com/nosir/cleave-zen/blob/b26233f/src/cursor-tracker/index.ts#L42)

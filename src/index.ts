@@ -1,13 +1,20 @@
 import { registerCursorTracker } from './cursor-tracker'
 import type { RegisterCursorTrackerPropsType } from './cursor-tracker/types'
 
-import type { FormatResultType } from './common/types'
+import type {
+  FormatResultType,
+  DelimiterType,
+  BlocksType,
+} from './common/types'
 
 import { formatGeneral } from './general'
 import type { FormatGeneralOptionsType } from './general/types'
 
 import { formatCreditCard } from './credit-card'
-import { DefaultCreditCardDelimiter } from './credit-card/constants'
+import {
+  DefaultCreditCardDelimiter,
+  type CreditCardTypes,
+} from './credit-card/constants'
 import type {
   FormatCreditCardOptionsType,
   FormatCreditCardResultType,
@@ -22,14 +29,25 @@ import type { FormatNumeralOptionsType } from './numeral/types'
 
 import { formatDate } from './date'
 import { DefaultDateDelimiter } from './date/constants'
-import type { FormatDateOptionsType } from './date/types'
+import type {
+  FormatDateOptionsType,
+  DatePatternType,
+  DateUnit,
+} from './date/types'
 
 import { formatTime } from './time'
 import { DefaultTimeDelimiter } from './time/constants'
-import type { FormatTimeOptionsType } from './time/types'
+import type {
+  FormatTimeOptionsType,
+  TimeFormatType,
+  TimePatternType,
+  TimeUnit,
+} from './time/types'
 
 export {
   type FormatResultType,
+  type DelimiterType,
+  type BlocksType,
 
   // cursor tracker
   registerCursorTracker,
@@ -42,6 +60,7 @@ export {
   // credit card
   formatCreditCard,
   DefaultCreditCardDelimiter,
+  type CreditCardTypes,
   type FormatCreditCardOptionsType,
   type FormatCreditCardResultType,
 
@@ -54,10 +73,15 @@ export {
   // date
   formatDate,
   DefaultDateDelimiter,
+  type DateUnit,
+  type DatePatternType,
   type FormatDateOptionsType,
 
   // time
   formatTime,
   DefaultTimeDelimiter,
+  type TimeUnit,
   type FormatTimeOptionsType,
+  type TimeFormatType,
+  type TimePatternType,
 }

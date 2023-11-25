@@ -26,7 +26,7 @@
 
 #### Defined in
 
-[numeral/types.ts:6](https://github.com/nosir/cleave-zen/blob/c5b793a/src/numeral/types.ts#L6)
+[numeral/types.ts:6](https://github.com/nosir/cleave-zen/blob/b26233f/src/numeral/types.ts#L6)
 
 ___
 
@@ -36,7 +36,7 @@ ___
 
 #### Defined in
 
-[numeral/types.ts:9](https://github.com/nosir/cleave-zen/blob/c5b793a/src/numeral/types.ts#L9)
+[numeral/types.ts:9](https://github.com/nosir/cleave-zen/blob/b26233f/src/numeral/types.ts#L9)
 
 ___
 
@@ -46,7 +46,7 @@ ___
 
 #### Defined in
 
-[numeral/types.ts:10](https://github.com/nosir/cleave-zen/blob/c5b793a/src/numeral/types.ts#L10)
+[numeral/types.ts:10](https://github.com/nosir/cleave-zen/blob/b26233f/src/numeral/types.ts#L10)
 
 ___
 
@@ -56,7 +56,7 @@ ___
 
 #### Defined in
 
-[numeral/types.ts:8](https://github.com/nosir/cleave-zen/blob/c5b793a/src/numeral/types.ts#L8)
+[numeral/types.ts:8](https://github.com/nosir/cleave-zen/blob/b26233f/src/numeral/types.ts#L8)
 
 ___
 
@@ -66,7 +66,7 @@ ___
 
 #### Defined in
 
-[numeral/types.ts:11](https://github.com/nosir/cleave-zen/blob/c5b793a/src/numeral/types.ts#L11)
+[numeral/types.ts:11](https://github.com/nosir/cleave-zen/blob/b26233f/src/numeral/types.ts#L11)
 
 ___
 
@@ -76,7 +76,7 @@ ___
 
 #### Defined in
 
-[numeral/types.ts:7](https://github.com/nosir/cleave-zen/blob/c5b793a/src/numeral/types.ts#L7)
+[numeral/types.ts:7](https://github.com/nosir/cleave-zen/blob/b26233f/src/numeral/types.ts#L7)
 
 ___
 
@@ -86,7 +86,7 @@ ___
 
 #### Defined in
 
-[numeral/types.ts:15](https://github.com/nosir/cleave-zen/blob/c5b793a/src/numeral/types.ts#L15)
+[numeral/types.ts:15](https://github.com/nosir/cleave-zen/blob/b26233f/src/numeral/types.ts#L15)
 
 ___
 
@@ -96,7 +96,7 @@ ___
 
 #### Defined in
 
-[numeral/types.ts:14](https://github.com/nosir/cleave-zen/blob/c5b793a/src/numeral/types.ts#L14)
+[numeral/types.ts:14](https://github.com/nosir/cleave-zen/blob/b26233f/src/numeral/types.ts#L14)
 
 ___
 
@@ -106,7 +106,7 @@ ___
 
 #### Defined in
 
-[numeral/types.ts:13](https://github.com/nosir/cleave-zen/blob/c5b793a/src/numeral/types.ts#L13)
+[numeral/types.ts:13](https://github.com/nosir/cleave-zen/blob/b26233f/src/numeral/types.ts#L13)
 
 ___
 
@@ -116,7 +116,7 @@ ___
 
 #### Defined in
 
-[numeral/types.ts:12](https://github.com/nosir/cleave-zen/blob/c5b793a/src/numeral/types.ts#L12)
+[numeral/types.ts:12](https://github.com/nosir/cleave-zen/blob/b26233f/src/numeral/types.ts#L12)
 
 ___
 
@@ -126,4 +126,4 @@ ___
 
 #### Defined in
 
-[numeral/types.ts:5](https://github.com/nosir/cleave-zen/blob/c5b793a/src/numeral/types.ts#L5)
+[numeral/types.ts:5](https://github.com/nosir/cleave-zen/blob/b26233f/src/numeral/types.ts#L5)

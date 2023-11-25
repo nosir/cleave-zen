@@ -2,8 +2,6 @@
 
 # Enumeration: NumeralThousandGroupStyles
 
-Numeral thousand group styles to be specified when formatting numeral
-
 ## Table of contents
 
 ### Enumeration Members
@@ -21,7 +19,7 @@ Numeral thousand group styles to be specified when formatting numeral
 
 #### Defined in
 
-[numeral/constants.ts:8](https://github.com/nosir/cleave-zen/blob/c5b793a/src/numeral/constants.ts#L8)
+[numeral/constants.ts:5](https://github.com/nosir/cleave-zen/blob/b26233f/src/numeral/constants.ts#L5)
 
 ___
 
@@ -31,7 +29,7 @@ ___
 
 #### Defined in
 
-[numeral/constants.ts:10](https://github.com/nosir/cleave-zen/blob/c5b793a/src/numeral/constants.ts#L10)
+[numeral/constants.ts:7](https://github.com/nosir/cleave-zen/blob/b26233f/src/numeral/constants.ts#L7)
 
 ___
 
@@ -41,7 +39,7 @@ ___
 
 #### Defined in
 
-[numeral/constants.ts:7](https://github.com/nosir/cleave-zen/blob/c5b793a/src/numeral/constants.ts#L7)
+[numeral/constants.ts:4](https://github.com/nosir/cleave-zen/blob/b26233f/src/numeral/constants.ts#L4)
 
 ___
 
@@ -51,4 +49,4 @@ ___
 
 #### Defined in
 
-[numeral/constants.ts:9](https://github.com/nosir/cleave-zen/blob/c5b793a/src/numeral/constants.ts#L9)
+[numeral/constants.ts:6](https://github.com/nosir/cleave-zen/blob/b26233f/src/numeral/constants.ts#L6)

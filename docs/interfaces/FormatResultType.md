@@ -22,4 +22,4 @@
 
 #### Defined in
 
-[common/types.ts:25](https://github.com/nosir/cleave-zen/blob/c5b793a/src/common/types.ts#L25)
+[common/types.ts:25](https://github.com/nosir/cleave-zen/blob/b26233f/src/common/types.ts#L25)

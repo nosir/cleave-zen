@@ -20,7 +20,7 @@
 
 #### Defined in
 
-[time/types.ts:10](https://github.com/nosir/cleave-zen/blob/c5b793a/src/time/types.ts#L10)
+[time/types.ts:10](https://github.com/nosir/cleave-zen/blob/b26233f/src/time/types.ts#L10)
 
 ___
 
@@ -30,27 +30,27 @@ ___
 
 #### Defined in
 
-[time/types.ts:9](https://github.com/nosir/cleave-zen/blob/c5b793a/src/time/types.ts#L9)
+[time/types.ts:9](https://github.com/nosir/cleave-zen/blob/b26233f/src/time/types.ts#L9)
 
 ___
 
 ### timeFormat
 
-• `Optional` **timeFormat**: `TimeFormatType`
+• `Optional` **timeFormat**: [`TimeFormatType`](../modules.md#timeformattype)
 
 #### Defined in
 
-[time/types.ts:12](https://github.com/nosir/cleave-zen/blob/c5b793a/src/time/types.ts#L12)
+[time/types.ts:12](https://github.com/nosir/cleave-zen/blob/b26233f/src/time/types.ts#L12)
 
 ___
 
 ### timePattern
 
-• `Optional` **timePattern**: `TimePatternType`
+• `Optional` **timePattern**: [`TimePatternType`](../modules.md#timepatterntype)
 
 #### Defined in
 
-[time/types.ts:11](https://github.com/nosir/cleave-zen/blob/c5b793a/src/time/types.ts#L11)
+[time/types.ts:11](https://github.com/nosir/cleave-zen/blob/b26233f/src/time/types.ts#L11)
 
 ___
 
@@ -60,4 +60,4 @@ ___
 
 #### Defined in
 
-[time/types.ts:8](https://github.com/nosir/cleave-zen/blob/c5b793a/src/time/types.ts#L8)
+[time/types.ts:8](https://github.com/nosir/cleave-zen/blob/b26233f/src/time/types.ts#L8)

@@ -20,11 +20,11 @@
 
 ### blocks
 
-• **blocks**: `BlocksType`
+• **blocks**: [`BlocksType`](../modules.md#blockstype)
 
 #### Defined in
 
-[general/types.ts:5](https://github.com/nosir/cleave-zen/blob/c5b793a/src/general/types.ts#L5)
+[general/types.ts:5](https://github.com/nosir/cleave-zen/blob/b26233f/src/general/types.ts#L5)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[general/types.ts:7](https://github.com/nosir/cleave-zen/blob/c5b793a/src/general/types.ts#L7)
+[general/types.ts:7](https://github.com/nosir/cleave-zen/blob/b26233f/src/general/types.ts#L7)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 #### Defined in
 
-[general/types.ts:6](https://github.com/nosir/cleave-zen/blob/c5b793a/src/general/types.ts#L6)
+[general/types.ts:6](https://github.com/nosir/cleave-zen/blob/b26233f/src/general/types.ts#L6)
 
 ___
 
@@ -54,7 +54,7 @@ ___
 
 #### Defined in
 
-[general/types.ts:8](https://github.com/nosir/cleave-zen/blob/c5b793a/src/general/types.ts#L8)
+[general/types.ts:8](https://github.com/nosir/cleave-zen/blob/b26233f/src/general/types.ts#L8)
 
 ___
 
@@ -64,7 +64,7 @@ ___
 
 #### Defined in
 
-[general/types.ts:12](https://github.com/nosir/cleave-zen/blob/c5b793a/src/general/types.ts#L12)
+[general/types.ts:12](https://github.com/nosir/cleave-zen/blob/b26233f/src/general/types.ts#L12)
 
 ___
 
@@ -74,7 +74,7 @@ ___
 
 #### Defined in
 
-[general/types.ts:10](https://github.com/nosir/cleave-zen/blob/c5b793a/src/general/types.ts#L10)
+[general/types.ts:10](https://github.com/nosir/cleave-zen/blob/b26233f/src/general/types.ts#L10)
 
 ___
 
@@ -84,7 +84,7 @@ ___
 
 #### Defined in
 
-[general/types.ts:9](https://github.com/nosir/cleave-zen/blob/c5b793a/src/general/types.ts#L9)
+[general/types.ts:9](https://github.com/nosir/cleave-zen/blob/b26233f/src/general/types.ts#L9)
 
 ___
 
@@ -94,7 +94,7 @@ ___
 
 #### Defined in
 
-[general/types.ts:11](https://github.com/nosir/cleave-zen/blob/c5b793a/src/general/types.ts#L11)
+[general/types.ts:11](https://github.com/nosir/cleave-zen/blob/b26233f/src/general/types.ts#L11)
 
 ___
 
@@ -104,4 +104,4 @@ ___
 
 #### Defined in
 
-[general/types.ts:4](https://github.com/nosir/cleave-zen/blob/c5b793a/src/general/types.ts#L4)
+[general/types.ts:4](https://github.com/nosir/cleave-zen/blob/b26233f/src/general/types.ts#L4)

@@ -21,7 +21,7 @@
 
 #### Defined in
 
-[date/types.ts:12](https://github.com/nosir/cleave-zen/blob/c5b793a/src/date/types.ts#L12)
+[date/types.ts:12](https://github.com/nosir/cleave-zen/blob/b26233f/src/date/types.ts#L12)
 
 ___
 
@@ -31,17 +31,17 @@ ___
 
 #### Defined in
 
-[date/types.ts:11](https://github.com/nosir/cleave-zen/blob/c5b793a/src/date/types.ts#L11)
+[date/types.ts:11](https://github.com/nosir/cleave-zen/blob/b26233f/src/date/types.ts#L11)
 
 ___
 
 ### datePattern
 
-• `Optional` **datePattern**: `DatePatternType`
+• `Optional` **datePattern**: [`DatePatternType`](../modules.md#datepatterntype)
 
 #### Defined in
 
-[date/types.ts:10](https://github.com/nosir/cleave-zen/blob/c5b793a/src/date/types.ts#L10)
+[date/types.ts:10](https://github.com/nosir/cleave-zen/blob/b26233f/src/date/types.ts#L10)
 
 ___
 
@@ -51,7 +51,7 @@ ___
 
 #### Defined in
 
-[date/types.ts:9](https://github.com/nosir/cleave-zen/blob/c5b793a/src/date/types.ts#L9)
+[date/types.ts:9](https://github.com/nosir/cleave-zen/blob/b26233f/src/date/types.ts#L9)
 
 ___
 
@@ -61,7 +61,7 @@ ___
 
 #### Defined in
 
-[date/types.ts:8](https://github.com/nosir/cleave-zen/blob/c5b793a/src/date/types.ts#L8)
+[date/types.ts:8](https://github.com/nosir/cleave-zen/blob/b26233f/src/date/types.ts#L8)
 
 ___
 
@@ -71,4 +71,4 @@ ___
 
 #### Defined in
 
-[date/types.ts:7](https://github.com/nosir/cleave-zen/blob/c5b793a/src/date/types.ts#L7)
+[date/types.ts:7](https://github.com/nosir/cleave-zen/blob/b26233f/src/date/types.ts#L7)
