@@ -54,7 +54,7 @@
 
 #### Defined in
 
-[common/types.ts:6](https://github.com/nosir/cleave-zen/blob/852a18f/src/common/types.ts#L6)
+[common/types.ts:6](https://github.com/nosir/cleave-zen/blob/b7d817d/src/common/types.ts#L6)
 
 ___
 
@@ -64,7 +64,7 @@ ___
 
 #### Defined in
 
-[date/types.ts:4](https://github.com/nosir/cleave-zen/blob/852a18f/src/date/types.ts#L4)
+[date/types.ts:4](https://github.com/nosir/cleave-zen/blob/b7d817d/src/date/types.ts#L4)
 
 ___
 
@@ -74,7 +74,7 @@ ___
 
 #### Defined in
 
-[date/types.ts:3](https://github.com/nosir/cleave-zen/blob/852a18f/src/date/types.ts#L3)
+[date/types.ts:3](https://github.com/nosir/cleave-zen/blob/b7d817d/src/date/types.ts#L3)
 
 ___
 
@@ -84,7 +84,7 @@ ___
 
 #### Defined in
 
-[common/types.ts:5](https://github.com/nosir/cleave-zen/blob/852a18f/src/common/types.ts#L5)
+[common/types.ts:5](https://github.com/nosir/cleave-zen/blob/b7d817d/src/common/types.ts#L5)
 
 ___
 
@@ -94,7 +94,7 @@ ___
 
 #### Defined in
 
-[cursor-tracker/types.ts:3](https://github.com/nosir/cleave-zen/blob/852a18f/src/cursor-tracker/types.ts#L3)
+[cursor-tracker/types.ts:3](https://github.com/nosir/cleave-zen/blob/b7d817d/src/cursor-tracker/types.ts#L3)
 
 ___
 
@@ -111,7 +111,7 @@ ___
 
 #### Defined in
 
-[common/types.ts:1](https://github.com/nosir/cleave-zen/blob/852a18f/src/common/types.ts#L1)
+[common/types.ts:1](https://github.com/nosir/cleave-zen/blob/b7d817d/src/common/types.ts#L1)
 
 ___
 
@@ -121,7 +121,7 @@ ___
 
 #### Defined in
 
-[time/types.ts:5](https://github.com/nosir/cleave-zen/blob/852a18f/src/time/types.ts#L5)
+[time/types.ts:5](https://github.com/nosir/cleave-zen/blob/b7d817d/src/time/types.ts#L5)
 
 ___
 
@@ -131,7 +131,7 @@ ___
 
 #### Defined in
 
-[time/types.ts:4](https://github.com/nosir/cleave-zen/blob/852a18f/src/time/types.ts#L4)
+[time/types.ts:4](https://github.com/nosir/cleave-zen/blob/b7d817d/src/time/types.ts#L4)
 
 ___
 
@@ -141,7 +141,7 @@ ___
 
 #### Defined in
 
-[time/types.ts:3](https://github.com/nosir/cleave-zen/blob/852a18f/src/time/types.ts#L3)
+[time/types.ts:3](https://github.com/nosir/cleave-zen/blob/b7d817d/src/time/types.ts#L3)
 
 ## Variables
 
@@ -151,7 +151,7 @@ ___
 
 #### Defined in
 
-[credit-card/constants.ts:4](https://github.com/nosir/cleave-zen/blob/852a18f/src/credit-card/constants.ts#L4)
+[credit-card/constants.ts:4](https://github.com/nosir/cleave-zen/blob/b7d817d/src/credit-card/constants.ts#L4)
 
 ___
 
@@ -161,7 +161,7 @@ ___
 
 #### Defined in
 
-[date/constants.ts:4](https://github.com/nosir/cleave-zen/blob/852a18f/src/date/constants.ts#L4)
+[date/constants.ts:4](https://github.com/nosir/cleave-zen/blob/b7d817d/src/date/constants.ts#L4)
 
 ___
 
@@ -171,7 +171,7 @@ ___
 
 #### Defined in
 
-[numeral/constants.ts:9](https://github.com/nosir/cleave-zen/blob/852a18f/src/numeral/constants.ts#L9)
+[numeral/constants.ts:9](https://github.com/nosir/cleave-zen/blob/b7d817d/src/numeral/constants.ts#L9)
 
 ___
 
@@ -181,7 +181,7 @@ ___
 
 #### Defined in
 
-[time/constants.ts:5](https://github.com/nosir/cleave-zen/blob/852a18f/src/time/constants.ts#L5)
+[time/constants.ts:5](https://github.com/nosir/cleave-zen/blob/b7d817d/src/time/constants.ts#L5)
 
 ## Functions
 
@@ -202,7 +202,7 @@ ___
 
 #### Defined in
 
-[credit-card/index.ts:61](https://github.com/nosir/cleave-zen/blob/852a18f/src/credit-card/index.ts#L61)
+[credit-card/index.ts:61](https://github.com/nosir/cleave-zen/blob/b7d817d/src/credit-card/index.ts#L61)
 
 ___
 
@@ -223,7 +223,7 @@ ___
 
 #### Defined in
 
-[date/index.ts:288](https://github.com/nosir/cleave-zen/blob/852a18f/src/date/index.ts#L288)
+[date/index.ts:288](https://github.com/nosir/cleave-zen/blob/b7d817d/src/date/index.ts#L288)
 
 ___
 
@@ -244,7 +244,7 @@ ___
 
 #### Defined in
 
-[general/index.ts:37](https://github.com/nosir/cleave-zen/blob/852a18f/src/general/index.ts#L37)
+[general/index.ts:37](https://github.com/nosir/cleave-zen/blob/b7d817d/src/general/index.ts#L37)
 
 ___
 
@@ -265,7 +265,7 @@ ___
 
 #### Defined in
 
-[numeral/index.ts:112](https://github.com/nosir/cleave-zen/blob/852a18f/src/numeral/index.ts#L112)
+[numeral/index.ts:112](https://github.com/nosir/cleave-zen/blob/b7d817d/src/numeral/index.ts#L112)
 
 ___
 
@@ -286,7 +286,7 @@ ___
 
 #### Defined in
 
-[time/index.ts:190](https://github.com/nosir/cleave-zen/blob/852a18f/src/time/index.ts#L190)
+[time/index.ts:190](https://github.com/nosir/cleave-zen/blob/b7d817d/src/time/index.ts#L190)
 
 ___
 
@@ -307,7 +307,7 @@ ___
 
 #### Defined in
 
-[credit-card/index.ts:100](https://github.com/nosir/cleave-zen/blob/852a18f/src/credit-card/index.ts#L100)
+[credit-card/index.ts:100](https://github.com/nosir/cleave-zen/blob/b7d817d/src/credit-card/index.ts#L100)
 
 ___
 
@@ -327,4 +327,4 @@ ___
 
 #### Defined in
 
-[cursor-tracker/index.ts:42](https://github.com/nosir/cleave-zen/blob/852a18f/src/cursor-tracker/index.ts#L42)
+[cursor-tracker/index.ts:42](https://github.com/nosir/cleave-zen/blob/b7d817d/src/cursor-tracker/index.ts#L42)
