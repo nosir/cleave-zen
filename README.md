@@ -6,7 +6,10 @@
 
 A simple library to help you format input text content
 
-New generation of [cleave.js](https://github.com/nosir/cleave.js)
+Unlike its predecessor [cleave.js](https://github.com/nosir/cleave.js),
+`cleave-zen` no longer binds to DOM input elements. It now functions as a
+versatile formatting library, suitable for use in Node.js, browsers, and easier
+integration with frameworks like React, Angular, and any other libraries.
 
 ## Features
 
@@ -134,8 +137,9 @@ See all examples in this [repo](https://github.com/nosir/cleave-zen-examples)
 ## TODO List
 
 - [x] Create an example repo for individual lib usage case
+- [ ] Create demo page for different type of formatting
 - [ ] Add unit tests
 - [ ] Add docs comments for functions and usages
-- [ ] Add more usages in
+- [ ] Add more library integration usages in
       [example repo](https://github.com/nosir/cleave-zen-examples)
 - [ ] Create legacy cleave.js phone formatter in a separate repo
