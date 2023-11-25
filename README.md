@@ -6,17 +6,17 @@
 
 A simple library to help you format input text content
 
-New generation migrated from [cleave.js](https://github.com/nosir/cleave.js)
+New generation of [cleave.js](https://github.com/nosir/cleave.js)
 
 ## Features
 
 - Credit card formatting
-- Date / Time formatting
 - Numeral formatting
+- Date / Time formatting
 - Custom delimiter, prefix and blocks pattern
-- TypeScript
+- Non-intrusive: only providing the formatting methods
 
-**TL;DR** [Demo](TODO) |
+**TL;DR** [Demo (WIP)](https://github.com/nosir/cleave-zen) |
 [Usage Examples](https://github.com/nosir/cleave-zen-examples)
 
 ## Install
@@ -84,9 +84,9 @@ const App = () => {
 
 ### TypeScript
 
-This lib is written by TypeScript, so if you prefer to use it with TypeScript:
+This lib is written by TypeScript, so if you prefer to use it that way:
 
-```
+```js
 import { formatCreditCard, type FormatCreditCardOptions } from 'cleave-zen'
 
 const options: FormatCreditCardOptions = { delimiter: '-' }
@@ -96,10 +96,13 @@ const value: string = formatCreditCard('5163000011112222', options)
 ### Track cursor (optional)
 
 When you reset the input value, the cursor automatically moves to the end of the
-input field, which might give the impression of a bug. This library can fix the
-issue for you, simply add `registerCursorTracker` for the input field:
+input field, which can be annoying when you typing or deleting letters inside
+the string content.
 
-```
+This library can fix this issue for you! Simply add `registerCursorTracker` for
+the input field:
+
+```js
 import { registerCursorTracker, DefaultCreditCardDelimiter } from 'cleave-zen'
 
 registerCursorTracker({ input: creditCardInput, delimiter: DefaultCreditCardDelimiter }})
@@ -107,7 +110,7 @@ registerCursorTracker({ input: creditCardInput, delimiter: DefaultCreditCardDeli
 
 And for ReactJS usage above:
 
-```
+```js
 import { useRef, useEffect } from 'react'
 
 ...
