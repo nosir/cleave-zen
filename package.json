@@ -2,7 +2,7 @@
   "name": "cleave-zen",
   "title": "cleave-zen",
   "description": "WIP",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "author": "Max Huang <risonhuang@gmail.com>",
   "license": "MIT",
   "repository": {
@@ -26,7 +26,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "docs": "typedoc --out docs ./src && rm ./docs/README.md",
-    "build": "yarn docs && microbundle",
+    "build": "yarn docs && rm -rf ./dist/ && microbundle",
     "dev": "microbundle watch"
   },
   "devDependencies": {

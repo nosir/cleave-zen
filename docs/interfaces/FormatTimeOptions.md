@@ -10,7 +10,6 @@
 - [delimiterLazyShow](FormatTimeOptions.md#delimiterlazyshow)
 - [timeFormat](FormatTimeOptions.md#timeformat)
 - [timePattern](FormatTimeOptions.md#timepattern)
-- [value](FormatTimeOptions.md#value)
 
 ## Properties
 
@@ -20,7 +19,7 @@
 
 #### Defined in
 
-[time/types.ts:10](https://github.com/nosir/cleave-zen/blob/2535002/src/time/types.ts#L10)
+[time/types.ts:9](https://github.com/nosir/cleave-zen/blob/852a18f/src/time/types.ts#L9)
 
 ___
 
@@ -30,7 +29,7 @@ ___
 
 #### Defined in
 
-[time/types.ts:9](https://github.com/nosir/cleave-zen/blob/2535002/src/time/types.ts#L9)
+[time/types.ts:8](https://github.com/nosir/cleave-zen/blob/852a18f/src/time/types.ts#L8)
 
 ___
 
@@ -40,7 +39,7 @@ ___
 
 #### Defined in
 
-[time/types.ts:12](https://github.com/nosir/cleave-zen/blob/2535002/src/time/types.ts#L12)
+[time/types.ts:11](https://github.com/nosir/cleave-zen/blob/852a18f/src/time/types.ts#L11)
 
 ___
 
@@ -50,14 +49,4 @@ ___
 
 #### Defined in
 
-[time/types.ts:11](https://github.com/nosir/cleave-zen/blob/2535002/src/time/types.ts#L11)
-
-___
-
-### value
-
-• **value**: `string`
-
-#### Defined in
-
-[time/types.ts:8](https://github.com/nosir/cleave-zen/blob/2535002/src/time/types.ts#L8)
+[time/types.ts:10](https://github.com/nosir/cleave-zen/blob/852a18f/src/time/types.ts#L10)

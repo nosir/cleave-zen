@@ -13,7 +13,7 @@ import type { FormatGeneralOptions } from './general/types'
 import { formatCreditCard, getCreditCardType } from './credit-card'
 import {
   DefaultCreditCardDelimiter,
-  type CreditCardTypes,
+  type CreditCardType,
 } from './credit-card/constants'
 import type { FormatCreditCardOptions } from './credit-card/types'
 
@@ -54,7 +54,7 @@ export {
   formatCreditCard,
   getCreditCardType,
   DefaultCreditCardDelimiter,
-  type CreditCardTypes,
+  type CreditCardType,
   type FormatCreditCardOptions,
 
   // numeral

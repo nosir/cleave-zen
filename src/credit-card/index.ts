@@ -9,7 +9,7 @@ import {
 import {
   CreditCardBlocks,
   CreditCardRegex,
-  CreditCardTypes,
+  CreditCardType,
   DefaultCreditCardDelimiter,
 } from './constants'
 import type {
@@ -37,7 +37,7 @@ const getCreditCardInfo = ({
   // however, I never found any website validate card number like
   // this, hence probably you don't want to enable this option.
   for (const key of Object.keys(CreditCardRegex) as Array<
-    CreditCardExcludeGeneralType<CreditCardTypes>
+    CreditCardExcludeGeneralType<CreditCardType>
   >) {
     if (CreditCardRegex[key].test(value)) {
       const matchedBlocks: BlocksType = CreditCardBlocks[key]
@@ -50,7 +50,7 @@ const getCreditCardInfo = ({
   }
 
   return {
-    type: CreditCardTypes.GENERAL,
+    type: CreditCardType.GENERAL,
     blocks:
       strictMode ?? false
         ? getStrictBlocks(CreditCardBlocks.general)
@@ -100,7 +100,7 @@ export const formatCreditCard = (
 export const getCreditCardType = (
   value: string,
   delimiter?: DelimiterType
-): CreditCardTypes => {
+): CreditCardType => {
   // strip non-numeric characters
   value = stripNonNumeric(value)
   // strip delimiters

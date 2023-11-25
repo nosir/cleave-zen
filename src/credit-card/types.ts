@@ -1,13 +1,13 @@
 import type { BlocksType } from '../common/types'
-import type { CreditCardTypes } from './constants'
+import type { CreditCardType } from './constants'
 
-export type CreditCardBlocksType = Record<CreditCardTypes, BlocksType>
+export type CreditCardBlocksType = Record<CreditCardType, BlocksType>
 export type CreditCardRegexType = Record<
-  CreditCardExcludeGeneralType<CreditCardTypes>,
+  CreditCardExcludeGeneralType<CreditCardType>,
   RegExp
 >
 
-export type CreditCardExcludeGeneralType<T> = T extends CreditCardTypes.GENERAL
+export type CreditCardExcludeGeneralType<T> = T extends CreditCardType.GENERAL
   ? never
   : T
 
@@ -16,7 +16,7 @@ export interface GetCreditCardInfoProps {
   strictMode?: boolean
 }
 export interface CreditCardInfoProps {
-  type: CreditCardTypes
+  type: CreditCardType
   blocks: BlocksType
 }
 

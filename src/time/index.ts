@@ -5,7 +5,6 @@ import {
   getFormattedValue,
   getMaxLength,
   headStr,
-  isString,
 } from '../common/utils'
 import {
   DefaultTimeDelimiter,
