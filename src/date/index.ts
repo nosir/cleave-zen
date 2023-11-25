@@ -287,7 +287,7 @@ const getRangeFixedDate = ({
 
 export const formatDate = (
   value: string,
-  options: FormatDateOptions
+  options?: FormatDateOptions
 ): string => {
   const {
     delimiterLazyShow = false,

@@ -190,14 +190,14 @@ const getValidatedTime = ({
 
 export const formatTime = (
   value: string,
-  options: FormatTimeOptions
+  options?: FormatTimeOptions
 ): string => {
   const {
     delimiterLazyShow = false,
     delimiter = DefaultTimeDelimiter,
     timePattern = DefaultTimePattern,
     timeFormat = DefaultTimeFormat,
-  } = options
+  } = options ?? {}
   // strip non-numeric characters
   value = stripNonNumeric(value)
 

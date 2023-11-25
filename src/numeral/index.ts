@@ -111,7 +111,7 @@ const format = ({
 
 export const formatNumeral = (
   value: string,
-  options: FormatNumeralOptions
+  options?: FormatNumeralOptions
 ): string => {
   const {
     delimiter = DefaultNumeralDelimiter,
@@ -124,7 +124,7 @@ export const formatNumeral = (
     tailPrefix = false,
     signBeforePrefix = false,
     prefix = '',
-  } = options
+  } = options ?? {}
 
   value = format({
     value,
