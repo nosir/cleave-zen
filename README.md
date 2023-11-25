@@ -138,6 +138,8 @@ See all examples in this [repo](https://github.com/nosir/cleave-zen-examples)
 
 - [x] Create an example repo for individual lib usage case
 - [ ] Create demo page for different type of formatting
+- [ ] Review still related PRs and issues in the old cleave.js repo and
+      implement it here
 - [ ] Add unit tests
 - [ ] Add docs comments for functions and usages
 - [ ] Add more library integration usages in
