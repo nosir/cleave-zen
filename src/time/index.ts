@@ -1,4 +1,4 @@
-import type { BlocksType, FormatResultType } from '../common/types'
+import type { BlocksType } from '../common/types'
 import {
   stripNonNumeric,
   stripDelimiters,
@@ -13,18 +13,18 @@ import {
   DefaultTimePattern,
 } from './constants'
 import type {
-  FormatTimeOptionsType,
+  FormatTimeOptions,
   TimeFormatType,
-  TimeFormatOptionsType,
+  TimeFormatOptions,
   TimePatternType,
-  GetFixedTimeStringPropsType,
-  GetValidatedTimePropsType,
+  GetFixedTimeStringProps,
+  GetValidatedTimeProps,
   TimeUnit,
 } from './types'
 
 const getTimeFormatOptions = (
   timeFormat: TimeFormatType
-): TimeFormatOptionsType => {
+): TimeFormatOptions => {
   if (timeFormat === '12') {
     return {
       maxHourFirstDigit: 1,
@@ -68,7 +68,7 @@ const getFixedTime = (
 const getFixedTimeString = ({
   value,
   timePattern,
-}: GetFixedTimeStringPropsType): string => {
+}: GetFixedTimeStringProps): string => {
   let time: number[] = []
   let secondIndex = 0
   let minuteIndex = 0
@@ -148,11 +148,10 @@ const getValidatedTime = ({
   blocks,
   timePattern,
   timeFormat,
-}: GetValidatedTimePropsType): string => {
+}: GetValidatedTimeProps): string => {
   let result: string = ''
 
-  const timeFormatOptions: TimeFormatOptionsType =
-    getTimeFormatOptions(timeFormat)
+  const timeFormatOptions: TimeFormatOptions = getTimeFormatOptions(timeFormat)
 
   blocks.forEach((length: number, index: number) => {
     if (value.length > 0) {
@@ -190,51 +189,43 @@ const getValidatedTime = ({
 }
 
 export const formatTime = (
-  props: FormatTimeOptionsType | string
-): FormatResultType => {
-  const options: FormatTimeOptionsType = isString(props)
-    ? { value: props }
-    : props
-
+  value: string,
+  options: FormatTimeOptions
+): string => {
   const {
-    value,
     delimiterLazyShow = false,
     delimiter = DefaultTimeDelimiter,
     timePattern = DefaultTimePattern,
     timeFormat = DefaultTimeFormat,
   } = options
-
-  let result: string = value
-
   // strip non-numeric characters
-  result = stripNonNumeric(result)
+  value = stripNonNumeric(value)
 
   const blocks: BlocksType = getBlocksByTimePattern(timePattern)
-  result = getValidatedTime({
-    value: result,
+  value = getValidatedTime({
+    value,
     blocks,
     timePattern,
     timeFormat,
   })
 
   // strip delimiters
-  result = stripDelimiters({
-    value: result,
-    delimiter,
-    delimiters: [],
+  value = stripDelimiters({
+    value,
+    delimiters: [delimiter],
   })
 
   // max length
   const maxLength = getMaxLength(blocks)
-  result = headStr(result, maxLength)
+  value = headStr(value, maxLength)
 
   // calculate
-  result = getFormattedValue({
-    value: result,
+  value = getFormattedValue({
+    value,
     blocks,
     delimiter,
     delimiterLazyShow,
   })
 
-  return { value: result }
+  return value
 }

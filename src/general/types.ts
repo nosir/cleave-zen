@@ -1,7 +1,6 @@
 import type { BlocksType, DelimiterType } from '../common/types'
 
-export interface FormatGeneralOptionsType {
-  value: string
+export interface FormatGeneralOptions {
   blocks: BlocksType
   delimiterLazyShow?: boolean
   delimiter?: DelimiterType
@@ -12,7 +11,7 @@ export interface FormatGeneralOptionsType {
   lowercase?: boolean
 }
 
-export interface GetPrefixStrippedValuePropsType {
+export interface GetPrefixStrippedValueProps {
   value: string
   prefix: string
   tailPrefix: boolean

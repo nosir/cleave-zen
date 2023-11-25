@@ -3,8 +3,7 @@ import type { BlocksType, DelimiterType } from '../common/types'
 export type DateUnit = 'Y' | 'y' | 'm' | 'd'
 export type DatePatternType = DateUnit[]
 
-export interface FormatDateOptionsType {
-  value: string
+export interface FormatDateOptions {
   delimiterLazyShow?: boolean
   delimiter?: DelimiterType
   datePattern?: DatePatternType
@@ -12,12 +11,12 @@ export interface FormatDateOptionsType {
   dateMax?: string
 }
 
-export interface InitDateRangeReturnType {
+export interface InitDateRangeResults {
   min: number[]
   max: number[]
 }
 
-export interface DateCalculateOptionsType extends InitDateRangeReturnType {
+export interface DateCalculateOptions extends InitDateRangeResults {
   date?: number[]
   value?: string
   blocks?: BlocksType

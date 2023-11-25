@@ -1,9 +1,8 @@
-import type { BlocksType } from '../common/types'
+import type { BlocksType, DelimiterType } from '../common/types'
 import {
   getFormattedValue,
   getMaxLength,
   headStr,
-  isString,
   stripDelimiters,
   stripNonNumeric,
 } from '../common/utils'
@@ -14,10 +13,9 @@ import {
   DefaultCreditCardDelimiter,
 } from './constants'
 import type {
-  CreditCardInfoType,
-  FormatCreditCardOptionsType,
-  FormatCreditCardResultType,
-  GetCreditCardInfoPropsType,
+  CreditCardInfoProps,
+  FormatCreditCardOptions,
+  GetCreditCardInfoProps,
   CreditCardExcludeGeneralType,
 } from './types'
 
@@ -33,7 +31,7 @@ const getStrictBlocks = (blocks: BlocksType): BlocksType => {
 const getCreditCardInfo = ({
   value,
   strictMode,
-}: GetCreditCardInfoPropsType): CreditCardInfoType => {
+}: GetCreditCardInfoProps): CreditCardInfoProps => {
   // Some credit card can have up to 19 digits number.
   // Set strictMode to true will remove the 16 max-length restrain,
   // however, I never found any website validate card number like
@@ -61,47 +59,56 @@ const getCreditCardInfo = ({
 }
 
 export const formatCreditCard = (
-  props: FormatCreditCardOptionsType | string
-): FormatCreditCardResultType => {
-  const options: FormatCreditCardOptionsType = isString(props)
-    ? { value: props }
-    : props
-
+  value: string,
+  options?: FormatCreditCardOptions
+): string => {
   const {
-    value,
     delimiter = DefaultCreditCardDelimiter,
     delimiterLazyShow = false,
     strictMode = false,
-  } = options
-
-  let result: string = value
+  } = options ?? {}
 
   // strip non-numeric characters
-  result = stripNonNumeric(result)
+  value = stripNonNumeric(value)
 
   // strip delimiters
-  result = stripDelimiters({
-    value: result,
-    delimiter,
-    delimiters: [],
+  value = stripDelimiters({
+    value,
+    delimiters: [delimiter],
   })
 
-  const { blocks, type }: CreditCardInfoType = getCreditCardInfo({
-    value: result,
+  const { blocks }: CreditCardInfoProps = getCreditCardInfo({
+    value,
     strictMode,
   })
 
   // max length
   const maxLength = getMaxLength(blocks)
-  result = headStr(result, maxLength)
+  value = headStr(value, maxLength)
 
   // calculate
-  result = getFormattedValue({
-    value: result,
+  value = getFormattedValue({
+    value,
     blocks,
     delimiter,
     delimiterLazyShow,
   })
 
-  return { value: result, type }
+  return value
+}
+
+export const getCreditCardType = (
+  value: string,
+  delimiter?: DelimiterType
+): CreditCardTypes => {
+  // strip non-numeric characters
+  value = stripNonNumeric(value)
+  // strip delimiters
+  value = stripDelimiters({
+    value,
+    delimiters: [delimiter ?? DefaultCreditCardDelimiter],
+  })
+
+  const { type }: CreditCardInfoProps = getCreditCardInfo({ value })
+  return type
 }

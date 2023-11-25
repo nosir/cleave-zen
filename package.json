@@ -25,8 +25,8 @@
   "unpkg": "./dist/cleave-zen.umd.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "docs": "typedoc --out docs ./src",
-    "build": "microbundle",
+    "docs": "typedoc --out docs ./src && rm ./docs/README.md",
+    "build": "yarn docs && microbundle",
     "dev": "microbundle watch"
   },
   "devDependencies": {

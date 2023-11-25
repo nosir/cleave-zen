@@ -19,7 +19,7 @@
 
 #### Defined in
 
-[numeral/constants.ts:5](https://github.com/nosir/cleave-zen/blob/b26233f/src/numeral/constants.ts#L5)
+[numeral/constants.ts:5](https://github.com/nosir/cleave-zen/blob/2535002/src/numeral/constants.ts#L5)
 
 ___
 
@@ -29,7 +29,7 @@ ___
 
 #### Defined in
 
-[numeral/constants.ts:7](https://github.com/nosir/cleave-zen/blob/b26233f/src/numeral/constants.ts#L7)
+[numeral/constants.ts:7](https://github.com/nosir/cleave-zen/blob/2535002/src/numeral/constants.ts#L7)
 
 ___
 
@@ -39,7 +39,7 @@ ___
 
 #### Defined in
 
-[numeral/constants.ts:4](https://github.com/nosir/cleave-zen/blob/b26233f/src/numeral/constants.ts#L4)
+[numeral/constants.ts:4](https://github.com/nosir/cleave-zen/blob/2535002/src/numeral/constants.ts#L4)
 
 ___
 
@@ -49,4 +49,4 @@ ___
 
 #### Defined in
 
-[numeral/constants.ts:6](https://github.com/nosir/cleave-zen/blob/b26233f/src/numeral/constants.ts#L6)
+[numeral/constants.ts:6](https://github.com/nosir/cleave-zen/blob/2535002/src/numeral/constants.ts#L6)

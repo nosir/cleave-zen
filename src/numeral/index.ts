@@ -1,10 +1,5 @@
-import type { FormatResultType } from '../common/types'
-import type {
-  FormatNumeralOptionsRequiredType,
-  FormatNumeralOptionsType,
-} from './types'
+import type { FormatNumeralRequiredProps, FormatNumeralOptions } from './types'
 
-import { isString } from '../common/utils'
 import {
   DefaultNumeralDecimalMark,
   DefaultNumeralDelimiter,
@@ -26,7 +21,7 @@ const format = ({
   signBeforePrefix,
   tailPrefix,
   prefix,
-}: FormatNumeralOptionsRequiredType): string => {
+}: FormatNumeralRequiredProps): string => {
   let parts: string[]
   let partSignAndPrefix: string
   let partInteger: string
@@ -115,14 +110,10 @@ const format = ({
 }
 
 export const formatNumeral = (
-  props: FormatNumeralOptionsType | string
-): FormatResultType => {
-  const options: FormatNumeralOptionsType = isString(props)
-    ? { value: props }
-    : props
-
+  value: string,
+  options: FormatNumeralOptions
+): string => {
   const {
-    value,
     delimiter = DefaultNumeralDelimiter,
     numeralThousandsGroupStyle = DefaultNumeralThousandGroupStyle,
     numeralIntegerScale = DefaultNumeralIntegerScale,
@@ -135,7 +126,7 @@ export const formatNumeral = (
     prefix = '',
   } = options
 
-  const result: string = format({
+  value = format({
     value,
     delimiter,
     numeralIntegerScale,
@@ -149,5 +140,5 @@ export const formatNumeral = (
     prefix,
   })
 
-  return { value: result }
+  return value
 }

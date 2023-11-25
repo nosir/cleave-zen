@@ -1,19 +1,18 @@
-import type { BlocksType, FormatResultType } from '../common/types'
+import type { BlocksType } from '../common/types'
 import {
   stripNonNumeric,
   stripDelimiters,
   getFormattedValue,
   getMaxLength,
   headStr,
-  isString,
 } from '../common/utils'
 import { DefaultDateDelimiter, DefaultDatePattern } from './constants'
 import type {
   DateUnit,
-  InitDateRangeReturnType,
+  InitDateRangeResults,
   DatePatternType,
-  FormatDateOptionsType,
-  DateCalculateOptionsType,
+  FormatDateOptions,
+  DateCalculateOptions,
 } from './types'
 
 const getBlocksByDatePattern = (datePattern: DatePatternType): BlocksType => {
@@ -34,7 +33,7 @@ const getDateRange = ({
 }: {
   dateMin: string
   dateMax: string
-}): InitDateRangeReturnType => {
+}): InitDateRangeResults => {
   const min: number[] = dateMin
     .split('-')
     .reverse()
@@ -73,7 +72,7 @@ const getValidatedDate = ({
   datePattern,
   min,
   max,
-}: DateCalculateOptionsType): string => {
+}: DateCalculateOptions): string => {
   let result = ''
 
   blocks.forEach((length: number, index: number) => {
@@ -121,7 +120,7 @@ const getFixedDateString = ({
   datePattern,
   min,
   max,
-}: DateCalculateOptionsType): string => {
+}: DateCalculateOptions): string => {
   let date: number[] = []
   let dayIndex = 0
   let monthIndex = 0
@@ -256,7 +255,7 @@ const getRangeFixedDate = ({
   min,
   max,
   datePattern,
-}: DateCalculateOptionsType): number[] => {
+}: DateCalculateOptions): number[] => {
   if (date.length === 0 || (min.length < 3 && max.length < 3)) return date
 
   const hasYearInPattern: boolean =
@@ -287,25 +286,18 @@ const getRangeFixedDate = ({
 }
 
 export const formatDate = (
-  props: FormatDateOptionsType | string
-): FormatResultType => {
-  const options: FormatDateOptionsType = isString(props)
-    ? { value: props }
-    : props
-
+  value: string,
+  options: FormatDateOptions
+): string => {
   const {
-    value,
     delimiterLazyShow = false,
     delimiter = DefaultDateDelimiter,
     datePattern = DefaultDatePattern,
     dateMax = '',
     dateMin = '',
-  } = options
-
-  let result: string = value
-
+  } = options ?? {}
   // strip non-numeric characters
-  result = stripNonNumeric(result)
+  value = stripNonNumeric(value)
 
   const blocks: BlocksType = getBlocksByDatePattern(datePattern)
   const { min, max } = getDateRange({
@@ -313,8 +305,8 @@ export const formatDate = (
     dateMin,
   })
 
-  result = getValidatedDate({
-    value: result,
+  value = getValidatedDate({
+    value,
     blocks,
     datePattern,
     min,
@@ -322,23 +314,22 @@ export const formatDate = (
   })
 
   // strip delimiters
-  result = stripDelimiters({
-    value: result,
-    delimiter,
-    delimiters: [],
+  value = stripDelimiters({
+    value,
+    delimiters: [delimiter],
   })
 
   // max length
   const maxLength = getMaxLength(blocks)
-  result = headStr(result, maxLength)
+  value = headStr(value, maxLength)
 
   // calculate
-  result = getFormattedValue({
-    value: result,
+  value = getFormattedValue({
+    value,
     blocks,
     delimiter,
     delimiterLazyShow,
   })
 
-  return { value: result }
+  return value
 }

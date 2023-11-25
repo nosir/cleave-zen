@@ -11,18 +11,18 @@ export type RegisterCursorTrackerPropsType = {
   'delimiter' | 'delimiters'
 >
 
-interface CommonCalculateCursorIndexPropsType {
+interface CommonCalculateCursorIndexProps {
   value: string
   delimiters: DelimiterType[]
 }
 
-export interface CalculeteDirtyCursorIndexPropsType
-  extends CommonCalculateCursorIndexPropsType {
+export interface CalculeteDirtyCursorIndexProps
+  extends CommonCalculateCursorIndexProps {
   cleanCursorIndex: number
 }
 
-export interface CalculeteCleanCursorIndexPropsType
-  extends CommonCalculateCursorIndexPropsType {
+export interface CalculeteCleanCursorIndexProps
+  extends CommonCalculateCursorIndexProps {
   dirtyCursorIndex: number
 }
 

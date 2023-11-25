@@ -1,8 +1,8 @@
 import type { DelimiterType } from '../common/types'
 import { stripDelimiters } from '../common/utils'
 import type {
-  CalculeteCleanCursorIndexPropsType,
-  CalculeteDirtyCursorIndexPropsType,
+  CalculeteCleanCursorIndexProps,
+  CalculeteDirtyCursorIndexProps,
   RegisterCursorTrackerPropsType,
   CursorTrackerInputElement,
 } from './types'
@@ -11,7 +11,7 @@ const calculeteCleanCursorIndex = ({
   value,
   dirtyCursorIndex,
   delimiters,
-}: CalculeteCleanCursorIndexPropsType): number => {
+}: CalculeteCleanCursorIndexProps): number => {
   let index: number = dirtyCursorIndex
   for (let charIndex = 0; charIndex < dirtyCursorIndex; charIndex++) {
     if (delimiters.includes(value[charIndex])) {
@@ -25,7 +25,7 @@ const calculeteDirtyCursorIndex = ({
   value,
   cleanCursorIndex,
   delimiters,
-}: CalculeteDirtyCursorIndexPropsType): number => {
+}: CalculeteDirtyCursorIndexProps): number => {
   let index: number = cleanCursorIndex
   for (let charIndex = 0; charIndex < value.length; charIndex++) {
     if (delimiters.includes(value[charIndex])) {

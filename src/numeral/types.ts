@@ -1,8 +1,7 @@
 import type { DelimiterType } from '../common/types'
 import type { NumeralThousandGroupStyles } from './constants'
 
-export interface FormatNumeralOptionsType {
-  value: string
+export interface FormatNumeralOptions {
   delimiter?: DelimiterType
   numeralThousandsGroupStyle?: NumeralThousandGroupStyles
   numeralIntegerScale?: number
@@ -15,7 +14,7 @@ export interface FormatNumeralOptionsType {
   prefix?: string
 }
 
-export interface FormatNumeralOptionsRequiredType {
+export interface FormatNumeralRequiredProps {
   value: string
   delimiter: DelimiterType
   numeralThousandsGroupStyle: NumeralThousandGroupStyles

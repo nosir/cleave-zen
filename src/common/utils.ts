@@ -1,6 +1,6 @@
 import type {
-  StripDelimitersPropsType,
-  GetFormattedValuePropsType,
+  StripDelimitersProps,
+  GetFormattedValueProps,
   BlocksType,
   DelimiterType,
 } from './types'
@@ -26,26 +26,15 @@ export const getDelimiterRegexByDelimiter = (delimiter: string): RegExp =>
 
 export const stripDelimiters = ({
   value,
-  delimiter,
   delimiters,
-}: StripDelimitersPropsType): string => {
-  let result: string = value
-
-  // single delimiter
-  if (delimiter != null) {
-    return result.replace(getDelimiterRegexByDelimiter(delimiter), '')
-  }
-
-  // multiple delimiters
-  if (delimiters != null && delimiters.length > 0) {
-    delimiters.forEach((current: DelimiterType) => {
-      current.split('').forEach(letter => {
-        result = result.replace(getDelimiterRegexByDelimiter(letter), '')
-      })
+}: StripDelimitersProps): string => {
+  delimiters.forEach((current: DelimiterType) => {
+    current.split('').forEach(letter => {
+      value = value.replace(getDelimiterRegexByDelimiter(letter), '')
     })
-  }
+  })
 
-  return result
+  return value
 }
 
 export const getFormattedValue = ({
@@ -54,7 +43,7 @@ export const getFormattedValue = ({
   delimiter = '',
   delimiters = [],
   delimiterLazyShow = false,
-}: GetFormattedValuePropsType): string => {
+}: GetFormattedValueProps): string => {
   let result = ''
   let valueRemaining = value
   let currentDelimiter = ''

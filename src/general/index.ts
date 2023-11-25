@@ -1,20 +1,16 @@
-import type { FormatResultType } from '../common/types'
 import {
   getFormattedValue,
   stripDelimiters,
   stripNonNumeric,
 } from '../common/utils'
-import type {
-  FormatGeneralOptionsType,
-  GetPrefixStrippedValuePropsType,
-} from './types'
+import type { FormatGeneralOptions, GetPrefixStrippedValueProps } from './types'
 
 // strip prefix
 const stripPrefix = ({
   value,
   prefix,
   tailPrefix,
-}: GetPrefixStrippedValuePropsType): string => {
+}: GetPrefixStrippedValueProps): string => {
   const prefixLength: number = prefix.length
 
   // No prefix
@@ -39,10 +35,10 @@ const stripPrefix = ({
 }
 
 export const formatGeneral = (
-  props: FormatGeneralOptionsType
-): FormatResultType => {
+  value: string,
+  options: FormatGeneralOptions
+): string => {
   const {
-    value,
     blocks,
     delimiter = '',
     delimiters = [],
@@ -51,49 +47,51 @@ export const formatGeneral = (
     numericOnly = false,
     uppercase = false,
     lowercase = false,
-  } = props
+  } = options
 
   const tailPrefix: boolean = false // This is too buggy to be true
-  let result: string = value
+
+  if (delimiter.length > 0) {
+    delimiters.push(delimiter)
+  }
 
   // strip delimiters
-  result = stripDelimiters({
-    value: result,
-    delimiter,
+  value = stripDelimiters({
+    value,
     delimiters,
   })
 
   // strip prefix
-  result = stripPrefix({
-    value: result,
+  value = stripPrefix({
+    value,
     prefix,
     tailPrefix,
   })
 
   // strip non-numeric characters
-  result = numericOnly ? stripNonNumeric(result) : result
+  value = numericOnly ? stripNonNumeric(value) : value
 
   // convert case
-  result = uppercase ? result.toUpperCase() : result
-  result = lowercase ? result.toLowerCase() : result
+  value = uppercase ? value.toUpperCase() : value
+  value = lowercase ? value.toLowerCase() : value
 
   // prevent from showing prefix when no immediate option enabled with empty input value
   if (prefix.length > 0) {
     if (tailPrefix) {
-      result = result + prefix
+      value = value + prefix
     } else {
-      result = prefix + result
+      value = prefix + value
     }
   }
 
   // apply blocks
-  result = getFormattedValue({
-    value: result,
+  value = getFormattedValue({
+    value,
     blocks,
     delimiter,
     delimiters,
     delimiterLazyShow,
   })
 
-  return { value: result }
+  return value
 }

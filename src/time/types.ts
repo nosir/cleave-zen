@@ -4,7 +4,7 @@ export type TimeUnit = 'h' | 'm' | 's'
 export type TimePatternType = TimeUnit[]
 export type TimeFormatType = '12' | '24'
 
-export interface FormatTimeOptionsType {
+export interface FormatTimeOptions {
   value: string
   delimiterLazyShow?: boolean
   delimiter?: DelimiterType
@@ -12,21 +12,21 @@ export interface FormatTimeOptionsType {
   timeFormat?: TimeFormatType
 }
 
-export interface TimeFormatOptionsType {
+export interface TimeFormatOptions {
   maxHourFirstDigit: number
   maxHours: number
   maxMinutesFirstDigit: number
   maxMinutes: number
 }
 
-export interface GetValidatedTimePropsType {
+export interface GetValidatedTimeProps {
   value: string
   blocks: BlocksType
   timePattern: TimePatternType
   timeFormat: TimeFormatType
 }
 
-export interface GetFixedTimeStringPropsType {
+export interface GetFixedTimeStringProps {
   value: string
   timePattern: TimePatternType
 }

@@ -5,22 +5,15 @@ export type RequireExactlyOne<T, Keys extends keyof T = keyof T> = {
 export type DelimiterType = string
 export type BlocksType = number[]
 
-export type StripDelimitersPropsType = { value: string } & RequireExactlyOne<
-  {
-    delimiter: DelimiterType
-    delimiters: DelimiterType[]
-  },
-  'delimiter' | 'delimiters'
->
+export interface StripDelimitersProps {
+  value: string
+  delimiters: DelimiterType[]
+}
 
-export interface GetFormattedValuePropsType {
+export interface GetFormattedValueProps {
   value: string
   blocks: BlocksType
   delimiter?: DelimiterType
   delimiters?: DelimiterType[]
   delimiterLazyShow?: boolean
-}
-
-export interface FormatResultType {
-  value: string
 }
