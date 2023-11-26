@@ -1,7 +1,7 @@
 import type { DelimiterType } from '../common/types'
 import type { CreditCardBlocksType, CreditCardRegexType } from './types'
 
-export const DefaultCreditCardDelimiter: DelimiterType = '&'
+export const DefaultCreditCardDelimiter: DelimiterType = ' '
 
 export enum CreditCardType {
   UATP = 'uatp',
