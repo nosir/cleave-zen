@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="lt-ie10" lang="en-au"><![endif]-->
+<!--[if IE 9]><html class="lt-ie10" lang="en-au"><![endif]-->
+<!--[if gt IE 9]><!--><html lang="en-au"><!--<![endif]-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>cleave-zen - Format input text content when you are typing</title>
+    <link href="./lib/prism.css" rel="stylesheet"/>
+    <script src="./lib/prism.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Pathway+Gothic+One&#038;ver=1.0' rel="stylesheet">
+    <link href='./css/icon-font.css' rel="stylesheet">
+    <link href='./css/style.css' rel="stylesheet">
+</head>
+<body>
+
+<!-- ribbon -->
+<a href="https://github.com/nosir/cleave-zen"><img
+        style="position: absolute; z-index: 999; top: 0; right: 0; border: 0; width: 149px; height: 149px;"
+        src="./images/right-graphite@2x.png" alt="Fork me on GitHub"></a>
+
+<!-- logo -->
+<header>
+    <div class="btn-demos">
+        <div>DEMOS</div>
+        <div class="icon icon-arrow-circle-down"></div>
+    </div>
+    <div class="title-bar">
+        <div class="logo font-pathway">cleave-zen</div>
+        <div class="subtitle">A simple library to help you format <span class="input-txt">&lt;<span class="green">input</span>/&gt;</span> text content</div>
+        <!--<div class="btn-bar">-->
+            <!--<a class="btn" href="https://github.com/nosir/cleave.js">-->
+                <!--<span class="icon icon-github"></span><div class="title">Github Repo</div>-->
+            <!--</a>-->
+
+            <!--<a class="btn" href="https://github.com/nosir/cleave.js/blob/master/doc/doc.md">-->
+                <!--<span class="icon icon-arrow-circle-o-right"></span><div class="title">Documentation</div>-->
+            <!--</a>-->
+        <!--</div>-->
+        <!-- <div class="github-iframe-bar">
+            <iframe src="https://ghbtns.com/github-btn.html?user=nosir&repo=cleave.js&type=star&count=true"
+                    style="margin-right: 5px;"
+                    frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
+            <iframe src="https://ghbtns.com/github-btn.html?user=nosir&repo=cleave.js&type=fork&count=true"
+                    frameborder="0" scrolling="0" width="95px" height="20px"></iframe>
+        </div> -->
+    </div>
+</header>
+
+<!-- demos -->
+<div class="demos">
+    <section>
+        <h3>Credit card formatting</h3>
+
+        <div class="demo">
+            <p class="input-title">Enter credit card number</p>
+
+            <div class="field">
+                <input class="input-credit-card" placeholder="Enter credit card number" type="tel"/>
+                <div class="btn-clear hidden-right">clear</div>
+            </div>
+            <ul class="cards clearfix">
+                <li>
+                    <div class="col-left">
+                        <div class="icon-amex icon icon-cc-amex"></div>
+                    </div>
+                    <div class="col-right">
+                        <p>American Express: starts with <span class="link-number">34/37</span></p>
+                        <p>34<span class="dots">
+                                <span class="icon-circle"></span>
+                                <span class="icon-circle"></span>
+
+                                <span class="icon-circle dot-offset"></span>
+                                <span class="icon-circle"></span>
+                                <span class="icon-circle"></span>
+                                <span class="icon-circle"></span>
+                                <span class="icon-circle"></span>
+                                <span class="icon-circle"></span>
+
+                                <span class="icon-circle dot-offset"></span>
+                                <span class="icon-circle"></span>
+                                <span class="icon-circle"></span>
+                                <span class="icon-circle"></span>
+                                <span class="icon-circle"></span>
+                            </span>
+                        </p>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="col-left">
+                        <div class="icon-visa icon icon-cc-visa"></div>
+                    </div>
+                    <div class="col-right">
+                        <p>VISA: starts with <span class="link-number">4</span></p>
+                        <p>4<span class="dots">
+                                <span class="icon-circle"></span>
+                                <span class="icon-circle"></span>
+                                <span class="icon-circle"></span>
+
+                                <span class="icon-circle dot-offset"></span>
+                                <span class="icon-circle"></span>
+                                <span class="icon-circle"></span>
+                                <span class="icon-circle"></span>
+
+                                <span class="icon-circle dot-offset"></span>
+                                <span class="icon-circle"></span>
+                                <span class="icon-circle"></span>
+                                <span class="icon-circle"></span>
+
+                                <span class="icon-circle dot-offset"></span>
+                                <span class="icon-circle"></span>
+                                <span class="icon-circle"></span>
+                                <span class="icon-circle"></span>
+                            </span>
+                        </p>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="col-left">
+                        <div class="icon-diners icon icon-cc-diners-club"></div>
+                    </div>
+                    <div class="col-right">
+                        <p>Diners Club: starts with <span class="link-number">300-305/309...</span></p>
+                        <p>300<span class="dots">
+                                <span class="icon-circle"></span>
+
+                                <span class="icon-circle dot-offset"></span>
+                                <span class="icon-circle"></span>
+                                <span class="icon-circle"></span>
+                                <span class="icon-circle"></span>
+                                <span class="icon-circle"></span>
+                                <span class="icon-circle"></span>
+
+                                <span class="icon-circle dot-offset"></span>
+                                <span class="icon-circle"></span>
+                                <span class="icon-circle"></span>
+                                <span class="icon-circle"></span>
+                            </span>
+                        </p>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="col-left">
+                        <div class="icon-mastercard icon icon-cc-mastercard"></div>
+                    </div>
+                    <div class="col-right">
+                        <p>MasterCard: starts with <span class="link-number">51-55/22-27</span></p>
+                        <p>51<span class="dots">
+                                <span class="icon-circle"></span>
+                                <span class="icon-circle"></span>
+
+                                <span class="icon-circle dot-offset"></span>
+                                <span class="icon-circle"></span>
+                                <span class="icon-circle"></span>
+                                <span class="icon-circle"></span>
+
+                                <span class="icon-circle dot-offset"></span>
+                                <span class="icon-circle"></span>
+                                <span class="icon-circle"></span>
+                                <span class="icon-circle"></span>
+
+                                <span class="icon-circle dot-offset"></span>
+                                <span class="icon-circle"></span>
+                                <span class="icon-circle"></span>
+                                <span class="icon-circle"></span>
+                            </span>
+                        </p>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="col-left">
+                        <div class="icon-jcb icon icon-cc-jcb"></div>
+                    </div>
+                    <div class="col-right">
+                        <p>JCB: starts with 35/2131/1800</p>
+                        <p>35<span class="dots">
+                                <span class="icon-circle"></span>
+                                <span class="icon-circle"></span>
+
+                                <span class="icon-circle dot-offset-minus-gap"></span>
+                                <span class="icon-circle"></span>
+                                <span class="icon-circle"></span>
+                                <span class="icon-circle"></span>
+
+                                <span class="icon-circle dot-offset"></span>
+                                <span class="icon-circle"></span>
+                                <span class="icon-circle"></span>
+                                <span class="icon-circle"></span>
+
+                                <span class="icon-circle dot-offset"></span>
+                                <span class="icon-circle"></span>
+                                <span class="icon-circle"></span>
+                                <span class="icon-circle"></span>
+                            </span>
+                        </p>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="col-left">
+                        <div class="icon-discover icon icon-cc-discover"></div>
+                    </div>
+                    <div class="col-right">
+                        <p>Discover: starts with 6011|65|644-649</p>
+                        <p>6011<span class="dots">
+
+                                <span class="icon-circle dot-offset-minus-gap"></span>
+                                <span class="icon-circle"></span>
+                                <span class="icon-circle"></span>
+                                <span class="icon-circle"></span>
+
+                                <span class="icon-circle dot-offset"></span>
+                                <span class="icon-circle"></span>
+                                <span class="icon-circle"></span>
+                                <span class="icon-circle"></span>
+
+                                <span class="icon-circle dot-offset"></span>
+                                <span class="icon-circle"></span>
+                                <span class="icon-circle"></span>
+                                <span class="icon-circle"></span>
+                            </span>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+
+            <div class="code">
+<pre><code class="language-javascript">import { formatCreditCard, getCreditCardType } from 'cleave-zen'
+
+creditCardInput.addEventListener('input', e => {
+    const value = e.target.value
+    const creditCardValue = formatCreditCard(value)
+    const creditCardType = getCreditCardType(value)
+    // ... handle value and type change
+})
+</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h3>Date formatting</h3>
+
+        <div class="demo">
+            <p class="input-title">YYYY-MM-DD</p>
+
+            <div class="field">
+                <input class="input-date-a" placeholder="YYYY-MM-DD" type="tel"/>
+            </div>
+
+            <div class="code">
+<pre><code class="language-javascript">import { formatDate } from 'cleave-zen'
+
+dateInput.addEventListener('input', (e) => {
+    dateInput.value = formatDate(e.target.value, {
+        delimiter: '-',
+        datePattern: ['Y', 'm', 'd'],
+    })
+})
+  </code></pre>
+            </div>
+        </div>
+
+        <div class="demo">
+            <p class="input-title">MM/YY</p>
+
+            <div class="field">
+                <input class="input-date-b" placeholder="MM/YY" type="tel"/>
+            </div>
+
+            <div class="code">
+<pre><code class="language-javascript">import { formatDate } from 'cleave-zen'
+    
+dateInput.addEventListener('input', (e) => {
+    dateInput.value = formatDate(e.target.value, {
+        datePattern: ['m', 'y'],
+    })
+})</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h3>Time formatting</h3>
+
+        <div class="demo">
+            <p class="input-title">hh:mm:ss</p>
+
+            <div class="field">
+                <input class="input-time-a" placeholder="hh:mm:ss" type="tel"/>
+            </div>
+
+            <div class="code">
+<pre><code class="language-javascript">import { formatTime } from 'cleave-zen'
+
+timeInput.addEventListener('input', (e) => {
+    timeInput.value = formatTime(e.target.value, {
+        timePattern: ['h', 'm', 's'],
+    })
+})
+</code></pre>
+            </div>
+        </div>
+
+        <div class="demo">
+            <p class="input-title">hh:mm</p>
+
+            <div class="field">
+                <input class="input-time-b" placeholder="hh:mm" type="tel"/>
+            </div>
+
+            <div class="code">
+<pre><code class="language-javascript">import { formatTime } from 'cleave-zen'
+
+timeInput.addEventListener('input', (e) => {
+    timeInput.value = formatTime(e.target.value, {
+        timePattern: ['h', 'm'],
+    })
+})</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h3>Numeral formatting</h3>
+
+        <div class="demo">
+            <p class="input-title">Enter numeral</p>
+
+            <div class="field">
+                <div class="numeral-selector selector">
+                    <div class="select-box-wrapper">
+                        <select class="select-box">
+                            <option value="thousand" selected="selected">"thousand" style</option>
+                            <option value="lakh">Indian "lakh" style</option>
+                            <option value="wan">Chinese "wan" style</option>
+                        </select>
+                    </div>
+                    <div class="select-cover">
+                        <div class="title">Style: thousand</div>
+                        <div class="side">&nbsp;</div>
+                        <span class="arrow">&nbsp;</span>
+                    </div>
+                </div>
+                <input placeholder="Enter numeral" class="input-numeral" type="text"/>
+            </div>
+
+            <div class="code code-numeral">
+<pre><code class="language-javascript">import { formatNumeral } from 'cleave-zen'
+
+inputNumeral.addEventListener('input', (e) => {
+    inputNumeral.value = formatNumeral(e.target.value, {
+        numeralThousandsGroupStyle: 'thousand',
+    })
+})
+</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h3>Custom options</h3>
+
+        <div class="demo">
+            <p class="input-title">Blocks: [4, 3, 3, 4]</p>
+
+            <div class="field">
+                <input class="input-blocks" placeholder="Blocks: [4, 3, 3, 4]" type="text"/>
+            </div>
+
+            <div class="code">
+<pre><code class="language-javascript">import { formatGeneral } from 'cleave-zen'
+
+blocksInput.addEventListener('input', (e) => {
+    blocksInput.value = formatGeneral(e.target.value, {
+        blocks: [4, 3, 3, 4],
+    })
+})</code></pre>
+            </div>
+        </div>
+
+        <div class="demo">
+            <p class="input-title">Delimiter: "·"</p>
+
+            <div class="field">
+                <input class="input-delimiter" placeholder='Delimiter: "·"' type="text"/>
+            </div>
+
+            <div class="code">
+<pre><code class="language-javascript">import { formatGeneral } from 'cleave-zen'
+
+blocksInput.addEventListener('input', (e) => {
+    blocksInput.value = formatGeneral(e.target.value, {
+        blocks: [3, 3, 3],
+        delimiter: '·',
+    })
+})</code></pre>
+            </div>
+        </div>
+
+        <div class="demo">
+            <p class="input-title">Delimiter: ['.', '.', '-']</p>
+
+            <div class="field">
+                <input class="input-delimiters" placeholder='Delimiters: [".", ".", "-"]' type="text"/>
+            </div>
+
+            <div class="code">
+<pre><code class="language-javascript">import { formatGeneral } from 'cleave-zen'
+
+blocksInput.addEventListener('input', (e) => {
+    blocksInput.value = formatGeneral(e.target.value, {
+        delimiters: ['.', '.', '-'],
+        blocks: [3, 3, 3, 2],
+        uppercase: true
+    })
+})
+</code></pre>
+            </div>
+        </div>
+
+        <div class="demo">
+            <p class="input-title">Prefix-</p>
+
+            <div class="field">
+                <input class="input-prefix" type="text"/>
+            </div>
+
+            <div class="code">
+<pre><code class="language-javascript">import { formatGeneral } from 'cleave-zen'
+
+blocksInput.addEventListener('input', (e) => {
+    blocksInput.value = formatGeneral(e.target.value, {
+        prefix: 'PREFIX',
+        blocks: [6, 4, 4, 4],
+        delimiter: '-',
+    })
+})</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <!-- <section class="section-playground">
+        <h3>Playground</h3>
+
+        <div class="demo">
+            <div class="field">
+                <a href="https://jsfiddle.net/nosir/kbaxx64s/" target="_blank">JSFiddle (Basic)</a>
+                <a href="https://jsfiddle.net/nosir/aLnhdf3z/" target="_blank">JSFiddle (More cases)</a>
+                <a href="https://jsfiddle.net/nosir/gLLsrxxf/" target="_blank">React JSFiddle</a>
+                <a href="https://jsfiddle.net/nosir/q58sh22t/" target="_blank">Angular JSFiddle</a>
+            </div>
+        </div>
+    </section> -->
+
+    <section>
+        <div class="see-more"><a href="https://github.com/nosir/cleave-zen"><div class="title">See more on Github</div><span class="icon icon-github"></span></a></div>
+    </section>
+
+</div>
+
+<div class="footer">
+    <div class="author">
+        cleave-zen<span class="sep-dot">·</span>Created by Max Huang<span class="sep-dot">·</span><span
+            class="sns">
+        <a class="btn-icon" href="https://github.com/nosir">
+            <span class="icon icon-github"></span>
+        </a>
+        <a class="btn-icon" href="https://au.linkedin.com/in/nosir">
+            <span class="icon icon-linkedin"></span>
+        </a>
+    </span>
+    </div>
+    <div class="project">
+        All brand icons used in the demo are provided by <a href="https://fontawesome.io/">Font Awesome</a><span class="sep-dot">·</span>Any usage should follow its <a href="https://fontawesome.io/license/">License</a>
+    </div>
+    <div class="project">
+        <a href="https://github.com/nosir/cleave-zen">GitHub Project</a><span class="sep-dot">·</span><a
+            href="https://github.com/nosir/cleave-zen/blob/main/docs/modules.md">Documentation</a><span class="sep-dot">·</span><a
+            href="https://github.com/nosir/cleave-zen/issues">Issues</a>
+    </div>
+</div>
+
+<script src="./lib/cleave-zen.umd.js"></script>
+<script src="./js/lib.js"></script>
+<script src="./js/main.js"></script>
+
+</body>
+</html>

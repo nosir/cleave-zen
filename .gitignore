@@ -1,3 +1,2 @@
-node_modules
-dist
-todo
+.idea
+.DS_Store
