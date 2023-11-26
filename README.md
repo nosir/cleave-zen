@@ -19,7 +19,7 @@ integration with frameworks like React, Angular, and any other libraries.
 - Custom delimiter, prefix and blocks pattern
 - Non-intrusive: only providing the formatting methods
 
-**TL;DR** [Demo (WIP)](https://github.com/nosir/cleave-zen) |
+**TL;DR** [Demo](https://nosir.github.io/cleave-zen) |
 [Usage Examples](https://github.com/nosir/cleave-zen-examples)
 
 ## Install
