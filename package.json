@@ -2,7 +2,7 @@
   "name": "cleave-zen",
   "title": "cleave-zen",
   "description": "WIP",
-  "version": "0.0.9",
+  "version": "0.0.14",
   "author": "Max Huang <risonhuang@gmail.com>",
   "license": "MIT",
   "repository": {
@@ -16,6 +16,7 @@
   "source": "src/index.ts",
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "import": "./dist/cleave-zen.module.js",
       "require": "./dist/cleave-zen.js"
     }
@@ -41,6 +42,6 @@
     "prettier": "^3.1.0",
     "typedoc": "^0.25.3",
     "typedoc-plugin-markdown": "^3.17.1",
-    "typescript": "*"
+    "typescript": "5.2.2"
   }
 }
