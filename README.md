@@ -120,6 +120,8 @@ import { useRef, useEffect } from 'react'
 
 const inputRef = useRef(null)
 useEffect(() => {
+    // registerCursorTracker itself returns an unregister destructor
+    // function so you can place it here for hook component unmount
     return registerCursorTracker({ input: inputRef.current, delimiter: DefaultCreditCardDelimiter })
 }, [])
 
