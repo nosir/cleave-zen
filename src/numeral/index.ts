@@ -142,3 +142,15 @@ export const formatNumeral = (
 
   return value
 }
+
+export const unformatNumeral = (
+  value: string,
+  options?: Pick<FormatNumeralOptions, 'numeralDecimalMark'>
+): string => {
+  const { numeralDecimalMark = DefaultNumeralDecimalMark } = options ?? {}
+
+  return value
+    .replace(numeralDecimalMark, 'M')
+    .replace(/[^0-9-M]/g, '')
+    .replace('M', '.')
+}

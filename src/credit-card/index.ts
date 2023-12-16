@@ -112,3 +112,6 @@ export const getCreditCardType = (
   const { type }: CreditCardInfoProps = getCreditCardInfo({ value })
   return type
 }
+
+export const unformatCreditCard = (value: string): string =>
+  stripNonNumeric(value)

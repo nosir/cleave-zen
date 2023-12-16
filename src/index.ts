@@ -7,15 +7,19 @@ import type {
   RequireExactlyOne,
 } from './common/types'
 
-import { formatGeneral } from './general'
+import { formatGeneral, unformatGeneral } from './general'
 import type { FormatGeneralOptions } from './general/types'
 
 import type { CreditCardType } from './credit-card/constants'
 import type { FormatCreditCardOptions } from './credit-card/types'
 import { DefaultCreditCardDelimiter } from './credit-card/constants'
-import { formatCreditCard, getCreditCardType } from './credit-card'
+import {
+  formatCreditCard,
+  unformatCreditCard,
+  getCreditCardType,
+} from './credit-card'
 
-import { formatNumeral } from './numeral'
+import { formatNumeral, unformatNumeral } from './numeral'
 import {
   NumeralThousandGroupStyles,
   DefaultNumeralDelimiter,
@@ -70,14 +74,17 @@ export {
 
   // general
   formatGeneral,
+  unformatGeneral,
 
   // credit card
   formatCreditCard,
+  unformatCreditCard,
   getCreditCardType,
   DefaultCreditCardDelimiter,
 
   // numeral
   formatNumeral,
+  unformatNumeral,
   NumeralThousandGroupStyles,
   DefaultNumeralDelimiter,
 

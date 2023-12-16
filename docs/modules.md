@@ -45,6 +45,9 @@
 - [formatTime](modules.md#formattime)
 - [getCreditCardType](modules.md#getcreditcardtype)
 - [registerCursorTracker](modules.md#registercursortracker)
+- [unformatCreditCard](modules.md#unformatcreditcard)
+- [unformatGeneral](modules.md#unformatgeneral)
+- [unformatNumeral](modules.md#unformatnumeral)
 
 ## Type Aliases
 
@@ -54,7 +57,7 @@
 
 #### Defined in
 
-[common/types.ts:6](https://github.com/nosir/cleave-zen/blob/b91d8a2/src/common/types.ts#L6)
+[common/types.ts:6](https://github.com/nosir/cleave-zen/blob/aec57aa/src/common/types.ts#L6)
 
 ___
 
@@ -64,7 +67,7 @@ ___
 
 #### Defined in
 
-[date/types.ts:4](https://github.com/nosir/cleave-zen/blob/b91d8a2/src/date/types.ts#L4)
+[date/types.ts:4](https://github.com/nosir/cleave-zen/blob/aec57aa/src/date/types.ts#L4)
 
 ___
 
@@ -74,7 +77,7 @@ ___
 
 #### Defined in
 
-[date/types.ts:3](https://github.com/nosir/cleave-zen/blob/b91d8a2/src/date/types.ts#L3)
+[date/types.ts:3](https://github.com/nosir/cleave-zen/blob/aec57aa/src/date/types.ts#L3)
 
 ___
 
@@ -84,7 +87,7 @@ ___
 
 #### Defined in
 
-[common/types.ts:5](https://github.com/nosir/cleave-zen/blob/b91d8a2/src/common/types.ts#L5)
+[common/types.ts:5](https://github.com/nosir/cleave-zen/blob/aec57aa/src/common/types.ts#L5)
 
 ___
 
@@ -94,7 +97,7 @@ ___
 
 #### Defined in
 
-[cursor-tracker/types.ts:3](https://github.com/nosir/cleave-zen/blob/b91d8a2/src/cursor-tracker/types.ts#L3)
+[cursor-tracker/types.ts:3](https://github.com/nosir/cleave-zen/blob/aec57aa/src/cursor-tracker/types.ts#L3)
 
 ___
 
@@ -111,7 +114,7 @@ ___
 
 #### Defined in
 
-[common/types.ts:1](https://github.com/nosir/cleave-zen/blob/b91d8a2/src/common/types.ts#L1)
+[common/types.ts:1](https://github.com/nosir/cleave-zen/blob/aec57aa/src/common/types.ts#L1)
 
 ___
 
@@ -121,7 +124,7 @@ ___
 
 #### Defined in
 
-[time/types.ts:5](https://github.com/nosir/cleave-zen/blob/b91d8a2/src/time/types.ts#L5)
+[time/types.ts:5](https://github.com/nosir/cleave-zen/blob/aec57aa/src/time/types.ts#L5)
 
 ___
 
@@ -131,7 +134,7 @@ ___
 
 #### Defined in
 
-[time/types.ts:4](https://github.com/nosir/cleave-zen/blob/b91d8a2/src/time/types.ts#L4)
+[time/types.ts:4](https://github.com/nosir/cleave-zen/blob/aec57aa/src/time/types.ts#L4)
 
 ___
 
@@ -141,7 +144,7 @@ ___
 
 #### Defined in
 
-[time/types.ts:3](https://github.com/nosir/cleave-zen/blob/b91d8a2/src/time/types.ts#L3)
+[time/types.ts:3](https://github.com/nosir/cleave-zen/blob/aec57aa/src/time/types.ts#L3)
 
 ## Variables
 
@@ -151,7 +154,7 @@ ___
 
 #### Defined in
 
-[credit-card/constants.ts:4](https://github.com/nosir/cleave-zen/blob/b91d8a2/src/credit-card/constants.ts#L4)
+[credit-card/constants.ts:4](https://github.com/nosir/cleave-zen/blob/aec57aa/src/credit-card/constants.ts#L4)
 
 ___
 
@@ -161,7 +164,7 @@ ___
 
 #### Defined in
 
-[date/constants.ts:4](https://github.com/nosir/cleave-zen/blob/b91d8a2/src/date/constants.ts#L4)
+[date/constants.ts:4](https://github.com/nosir/cleave-zen/blob/aec57aa/src/date/constants.ts#L4)
 
 ___
 
@@ -171,7 +174,7 @@ ___
 
 #### Defined in
 
-[numeral/constants.ts:9](https://github.com/nosir/cleave-zen/blob/b91d8a2/src/numeral/constants.ts#L9)
+[numeral/constants.ts:9](https://github.com/nosir/cleave-zen/blob/aec57aa/src/numeral/constants.ts#L9)
 
 ___
 
@@ -181,7 +184,7 @@ ___
 
 #### Defined in
 
-[time/constants.ts:5](https://github.com/nosir/cleave-zen/blob/b91d8a2/src/time/constants.ts#L5)
+[time/constants.ts:5](https://github.com/nosir/cleave-zen/blob/aec57aa/src/time/constants.ts#L5)
 
 ## Functions
 
@@ -202,7 +205,7 @@ ___
 
 #### Defined in
 
-[credit-card/index.ts:61](https://github.com/nosir/cleave-zen/blob/b91d8a2/src/credit-card/index.ts#L61)
+[credit-card/index.ts:61](https://github.com/nosir/cleave-zen/blob/aec57aa/src/credit-card/index.ts#L61)
 
 ___
 
@@ -223,7 +226,7 @@ ___
 
 #### Defined in
 
-[date/index.ts:288](https://github.com/nosir/cleave-zen/blob/b91d8a2/src/date/index.ts#L288)
+[date/index.ts:288](https://github.com/nosir/cleave-zen/blob/aec57aa/src/date/index.ts#L288)
 
 ___
 
@@ -244,7 +247,7 @@ ___
 
 #### Defined in
 
-[general/index.ts:37](https://github.com/nosir/cleave-zen/blob/b91d8a2/src/general/index.ts#L37)
+[general/index.ts:37](https://github.com/nosir/cleave-zen/blob/aec57aa/src/general/index.ts#L37)
 
 ___
 
@@ -265,7 +268,7 @@ ___
 
 #### Defined in
 
-[numeral/index.ts:112](https://github.com/nosir/cleave-zen/blob/b91d8a2/src/numeral/index.ts#L112)
+[numeral/index.ts:112](https://github.com/nosir/cleave-zen/blob/aec57aa/src/numeral/index.ts#L112)
 
 ___
 
@@ -286,7 +289,7 @@ ___
 
 #### Defined in
 
-[time/index.ts:190](https://github.com/nosir/cleave-zen/blob/b91d8a2/src/time/index.ts#L190)
+[time/index.ts:190](https://github.com/nosir/cleave-zen/blob/aec57aa/src/time/index.ts#L190)
 
 ___
 
@@ -307,7 +310,7 @@ ___
 
 #### Defined in
 
-[credit-card/index.ts:100](https://github.com/nosir/cleave-zen/blob/b91d8a2/src/credit-card/index.ts#L100)
+[credit-card/index.ts:100](https://github.com/nosir/cleave-zen/blob/aec57aa/src/credit-card/index.ts#L100)
 
 ___
 
@@ -327,4 +330,66 @@ ___
 
 #### Defined in
 
-[cursor-tracker/index.ts:42](https://github.com/nosir/cleave-zen/blob/b91d8a2/src/cursor-tracker/index.ts#L42)
+[cursor-tracker/index.ts:42](https://github.com/nosir/cleave-zen/blob/aec57aa/src/cursor-tracker/index.ts#L42)
+
+___
+
+### unformatCreditCard
+
+▸ **unformatCreditCard**(`value`): `string`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `value` | `string` |
+
+#### Returns
+
+`string`
+
+#### Defined in
+
+[credit-card/index.ts:116](https://github.com/nosir/cleave-zen/blob/aec57aa/src/credit-card/index.ts#L116)
+
+___
+
+### unformatGeneral
+
+▸ **unformatGeneral**(`value`, `options`): `string`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `value` | `string` |
+| `options` | `Pick`\<[`FormatGeneralOptions`](interfaces/FormatGeneralOptions.md), ``"delimiters"`` \| ``"delimiter"``\> |
+
+#### Returns
+
+`string`
+
+#### Defined in
+
+[general/index.ts:99](https://github.com/nosir/cleave-zen/blob/aec57aa/src/general/index.ts#L99)
+
+___
+
+### unformatNumeral
+
+▸ **unformatNumeral**(`value`, `options?`): `string`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `value` | `string` |
+| `options?` | `Pick`\<[`FormatNumeralOptions`](interfaces/FormatNumeralOptions.md), ``"numeralDecimalMark"``\> |
+
+#### Returns
+
+`string`
+
+#### Defined in
+
+[numeral/index.ts:146](https://github.com/nosir/cleave-zen/blob/aec57aa/src/numeral/index.ts#L146)

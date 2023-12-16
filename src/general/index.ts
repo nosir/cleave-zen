@@ -95,3 +95,11 @@ export const formatGeneral = (
 
   return value
 }
+
+export const unformatGeneral = (
+  value: string,
+  options: Pick<FormatGeneralOptions, 'delimiter' | 'delimiters'>
+): string => {
+  const { delimiter = '', delimiters = [] } = options
+  return stripDelimiters({ value, delimiters: [...delimiters, delimiter] })
+}
