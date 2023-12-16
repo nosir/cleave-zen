@@ -10,12 +10,10 @@ import type {
 import { formatGeneral } from './general'
 import type { FormatGeneralOptions } from './general/types'
 
-import { formatCreditCard, getCreditCardType } from './credit-card'
-import {
-  DefaultCreditCardDelimiter,
-  type CreditCardType,
-} from './credit-card/constants'
+import type { CreditCardType } from './credit-card/constants'
 import type { FormatCreditCardOptions } from './credit-card/types'
+import { DefaultCreditCardDelimiter } from './credit-card/constants'
+import { formatCreditCard, getCreditCardType } from './credit-card'
 
 import { formatNumeral } from './numeral'
 import {
@@ -37,44 +35,57 @@ import type {
   TimeUnit,
 } from './time/types'
 
-export {
-  type DelimiterType,
-  type BlocksType,
-  type RequireExactlyOne,
+export type {
+  // cursor tracker
+  RegisterCursorTrackerPropsType,
 
+  // general
+  DelimiterType,
+  BlocksType,
+  RequireExactlyOne,
+  FormatGeneralOptions,
+
+  // credit card
+  CreditCardType,
+  FormatCreditCardOptions,
+
+  // numeral
+  FormatNumeralOptions,
+
+  // date
+  DateUnit,
+  DatePatternType,
+  FormatDateOptions,
+
+  // time
+  TimeUnit,
+  FormatTimeOptions,
+  TimeFormatType,
+  TimePatternType,
+}
+
+export {
   // cursor tracker
   registerCursorTracker,
-  type RegisterCursorTrackerPropsType,
 
   // general
   formatGeneral,
-  type FormatGeneralOptions,
 
   // credit card
   formatCreditCard,
   getCreditCardType,
   DefaultCreditCardDelimiter,
-  type CreditCardType,
-  type FormatCreditCardOptions,
 
   // numeral
   formatNumeral,
   NumeralThousandGroupStyles,
   DefaultNumeralDelimiter,
-  type FormatNumeralOptions,
 
   // date
   formatDate,
   DefaultDateDelimiter,
-  type DateUnit,
-  type DatePatternType,
-  type FormatDateOptions,
 
   // time
   formatTime,
   DefaultTimeDelimiter,
-  type TimeUnit,
-  type FormatTimeOptions,
-  type TimeFormatType,
-  type TimePatternType,
 }
