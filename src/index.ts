@@ -1,5 +1,8 @@
 import { registerCursorTracker } from './cursor-tracker'
-import type { RegisterCursorTrackerPropsType } from './cursor-tracker/types'
+import type {
+  RegisterCursorTrackerPropsType,
+  CursorTrackerDestructor,
+} from './cursor-tracker/types'
 
 import type {
   DelimiterType,
@@ -42,6 +45,7 @@ import type {
 export type {
   // cursor tracker
   RegisterCursorTrackerPropsType,
+  CursorTrackerDestructor,
 
   // general
   DelimiterType,

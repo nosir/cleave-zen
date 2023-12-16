@@ -5,6 +5,7 @@ import type {
   CalculeteDirtyCursorIndexProps,
   RegisterCursorTrackerPropsType,
   CursorTrackerInputElement,
+  CursorTrackerDestructor,
 } from './types'
 
 const calculeteCleanCursorIndex = ({
@@ -44,20 +45,24 @@ export const registerCursorTracker = ({
   delimiter = '',
   delimiters = [],
   prefix = '',
-}: RegisterCursorTrackerPropsType): void => {
-  const cursorTrackerDelimiters: DelimiterType[] = [delimiter, ...delimiters]
-
+}: RegisterCursorTrackerPropsType): CursorTrackerDestructor => {
   const cursorTrackerInput: CursorTrackerInputElement =
     input as CursorTrackerInputElement
 
-  if (cursorTrackerInput.CLEAVE_ZEN_registered ?? false) {
-    return
+  if (cursorTrackerInput.CLEAVE_ZEN_cursor_tracker !== undefined) {
+    return () => {
+      cursorTrackerInput.removeEventListener(
+        'input',
+        cursorTrackerInput.CLEAVE_ZEN_cursor_tracker
+      )
+      cursorTrackerInput.CLEAVE_ZEN_cursor_tracker = undefined
+    }
   }
 
-  cursorTrackerInput.CLEAVE_ZEN_registered = true
+  const cursorTrackerDelimiters: DelimiterType[] = [delimiter, ...delimiters]
 
-  cursorTrackerInput.addEventListener('input', e => {
-    const isBackward = (e as InputEvent).inputType === 'deleteContentBackward'
+  cursorTrackerInput.CLEAVE_ZEN_cursor_tracker = (e: InputEvent) => {
+    const isBackward = e.inputType === 'deleteContentBackward'
 
     const element: CursorTrackerInputElement =
       e.target as CursorTrackerInputElement
@@ -66,13 +71,11 @@ export const registerCursorTracker = ({
     if (!isBackward && element.value.length === element.selectionEnd) {
       return
     }
-
     element.CLEAVE_ZEN_cleanCursorIndex = calculeteCleanCursorIndex({
       value: element.value,
       dirtyCursorIndex: element.selectionEnd ?? 0,
       delimiters: cursorTrackerDelimiters,
     })
-
     setTimeout(() => {
       // if current value is only to add the delimiter after prefix, do nothing
       if (
@@ -83,7 +86,6 @@ export const registerCursorTracker = ({
       ) {
         return
       }
-
       const dirtyCursorIndex = calculeteDirtyCursorIndex({
         value: element.value,
         cleanCursorIndex: element.CLEAVE_ZEN_cleanCursorIndex ?? 0,
@@ -91,5 +93,18 @@ export const registerCursorTracker = ({
       })
       element.setSelectionRange(dirtyCursorIndex, dirtyCursorIndex)
     }, 0)
-  })
+  }
+
+  cursorTrackerInput.addEventListener(
+    'input',
+    cursorTrackerInput.CLEAVE_ZEN_cursor_tracker
+  )
+
+  return () => {
+    cursorTrackerInput.removeEventListener(
+      'input',
+      cursorTrackerInput.CLEAVE_ZEN_cursor_tracker
+    )
+    cursorTrackerInput.CLEAVE_ZEN_cursor_tracker = undefined
+  }
 }

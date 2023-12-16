@@ -120,7 +120,7 @@ import { useRef, useEffect } from 'react'
 
 const inputRef = useRef(null)
 useEffect(() => {
-    registerCursorTracker({ input: inputRef.current, delimiter: DefaultCreditCardDelimiter })
+    return registerCursorTracker({ input: inputRef.current, delimiter: DefaultCreditCardDelimiter })
 }, [])
 
 ...

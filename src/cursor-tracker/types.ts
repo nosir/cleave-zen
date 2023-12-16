@@ -1,5 +1,7 @@
 import type { DelimiterType, RequireExactlyOne } from '../common/types'
 
+export type CursorTrackerDestructor = () => void
+
 export type RegisterCursorTrackerPropsType = {
   input: HTMLInputElement
   prefix?: string
@@ -29,5 +31,5 @@ export interface CalculeteCleanCursorIndexProps
 // Manipulate DOM Element to add this props, so prefix is required.
 export interface CursorTrackerInputElement extends HTMLInputElement {
   CLEAVE_ZEN_cleanCursorIndex?: number
-  CLEAVE_ZEN_registered?: boolean
+  CLEAVE_ZEN_cursor_tracker?: any
 }
