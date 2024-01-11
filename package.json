@@ -5,6 +5,7 @@
   "version": "0.0.17",
   "author": "Max Huang <risonhuang@gmail.com>",
   "license": "MIT",
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "https://github.com/nosir/cleave-zen.git"
@@ -18,7 +19,7 @@
     ".": {
       "types": "./dist/index.d.ts",
       "import": "./dist/cleave-zen.module.js",
-      "require": "./dist/cleave-zen.js"
+      "require": "./dist/cleave-zen.cjs"
     }
   },
   "main": "./dist/cleave-zen.js",
